@@ -83,7 +83,8 @@
 }
 
 $main-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $base-color: hsl(50, 100%, 50%);
 $base-color-alt: hsl(180, 100%, 50%);
@@ -100,13 +101,13 @@ $des-color: mix-neutral($color);
 $des-color-alt: mix-neutral($color-alt);
 
 $des-color-dark: darken($des-color,25%);
-$des-color-light: lighten($des-color,25%);
+$des-color-light: lighten($des-color,35%);
 
 $des-color-alt-dark: darken($des-color-alt,25%);
-$des-color-alt-light: lighten($des-color-alt,25%);
+$des-color-alt-light: lighten($des-color-alt,35%);
 
-$dark: darken($des-color-alt,48%);
-$light: lighten($des-color,48%);
+$dark: darken($des-color-alt,45%);
+$light: lighten($des-color,45%);
 
 body {
     width: 100%;
@@ -445,4 +446,39 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: rgba(white, 0.2);
+}
+
+.color {
+	color: $color;
+}
+.color-alt {
+	color: $color-alt;
+}
+
+.des-color {
+	color: $des-color;
+}
+.des-color-alt {
+	color: $des-color-alt;
+}
+
+.des-color-dark {
+	color: $des-color-dark;
+}
+.des-color-light {
+	color: $des-color-light;
+}
+
+.des-color-alt-dark {
+	color: $des-color-alt-dark;
+}
+.des-color-alt-light {
+	color: $des-color-alt-light;
+}
+
+.darker {
+	color: $dark;
+}
+.lighter {
+	color: $light;
 }
