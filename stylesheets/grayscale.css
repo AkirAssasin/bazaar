@@ -1,14 +1,14 @@
 /*
-$color: harmonious-mix($base-color-alt, $base-color);
-$color-alt: harmonious-mix($base-color, $base-color-alt);
+$color: $base-color;
+$color-alt: $base-color-alt;
 */
 /* line 112, ../sass/grayscale.scss */
 body {
   width: 100%;
   height: 100%;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fcf8e8;
-  background-color: #031515;
+  color: #f9f6e9;
+  background-color: #255058;
 }
 
 /* line 120, ../sass/grayscale.scss */
@@ -48,7 +48,7 @@ p {
 
 /* line 149, ../sass/grayscale.scss */
 a {
-  color: #fcf8e8;
+  color: #e2bc1c;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -56,7 +56,7 @@ a {
 /* line 154, ../sass/grayscale.scss */
 a:hover, a:focus {
   text-decoration: none;
-  color: #f5ebbc;
+  color: #efe6c1;
 }
 
 /* line 161, ../sass/grayscale.scss */
@@ -70,7 +70,7 @@ a:hover, a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #031515;
+  background-color: #081214;
 }
 /* line 171, ../sass/grayscale.scss */
 .navbar-custom .navbar-toggle {
@@ -92,36 +92,36 @@ a:hover, a:focus {
 }
 /* line 186, ../sass/grayscale.scss */
 .navbar-custom a {
-  color: white;
+  color: #e2bc1c;
 }
-/* line 191, ../sass/grayscale.scss */
+/* line 188, ../sass/grayscale.scss */
+.navbar-custom a:hover {
+  color: #efe6c1;
+}
+/* line 194, ../sass/grayscale.scss */
 .navbar-custom .nav li a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
-/* line 195, ../sass/grayscale.scss */
+/* line 199, ../sass/grayscale.scss */
 .navbar-custom .nav li a:hover {
-  color: #f5ebbc;
+  color: #efe6c1;
   outline: none;
   background-color: transparent;
 }
-/* line 200, ../sass/grayscale.scss */
+/* line 204, ../sass/grayscale.scss */
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
   outline: none;
   background-color: transparent;
 }
-/* line 206, ../sass/grayscale.scss */
+/* line 210, ../sass/grayscale.scss */
 .navbar-custom .nav li.active {
   outline: none;
 }
-/* line 208, ../sass/grayscale.scss */
+/* line 212, ../sass/grayscale.scss */
 .navbar-custom .nav li.active a {
-  background-color: #6e5f10;
-}
-/* line 210, ../sass/grayscale.scss */
-.navbar-custom .nav li.active a:hover {
-  color: #fcf8e8;
+  background-color: #63551a;
 }
 @media (min-width: 768px) {
   /* line 165, ../sass/grayscale.scss */
@@ -134,59 +134,59 @@ a:hover, a:focus {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
-  /* line 225, ../sass/grayscale.scss */
+  /* line 226, ../sass/grayscale.scss */
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid #6e5f10;
+    background: #081214;
+    border-bottom: 1px solid #63551a;
   }
 }
 
-/* line 233, ../sass/grayscale.scss */
+/* line 234, ../sass/grayscale.scss */
 .intro {
   display: table;
   width: 100%;
   height: auto;
   padding: 100px 0;
   text-align: center;
-  color: #fcf8e8;
+  color: #f9f6e9;
   background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-  background-color: #031515;
+  background-color: #081214;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-/* line 246, ../sass/grayscale.scss */
+/* line 247, ../sass/grayscale.scss */
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 249, ../sass/grayscale.scss */
+/* line 250, ../sass/grayscale.scss */
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
-/* line 252, ../sass/grayscale.scss */
+/* line 253, ../sass/grayscale.scss */
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 233, ../sass/grayscale.scss */
+  /* line 234, ../sass/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0;
   }
-  /* line 260, ../sass/grayscale.scss */
+  /* line 261, ../sass/grayscale.scss */
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
-  /* line 263, ../sass/grayscale.scss */
+  /* line 264, ../sass/grayscale.scss */
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
 
-/* line 270, ../sass/grayscale.scss */
+/* line 271, ../sass/grayscale.scss */
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -201,20 +201,20 @@ a:hover, a:focus {
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
-/* line 283, ../sass/grayscale.scss */
+/* line 284, ../sass/grayscale.scss */
 .btn-circle:hover, .btn-circle:focus {
   outline: none;
   color: white;
   background: rgba(255, 255, 255, 0.1);
 }
-/* line 289, ../sass/grayscale.scss */
+/* line 290, ../sass/grayscale.scss */
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
 }
-/* line 296, ../sass/grayscale.scss */
+/* line 297, ../sass/grayscale.scss */
 .btn-circle:hover i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
@@ -254,25 +254,25 @@ a:hover, a:focus {
     transform: scale(1);
   }
 }
-/* line 343, ../sass/grayscale.scss */
+/* line 344, ../sass/grayscale.scss */
 .content-section {
   padding-top: 100px;
 }
 
-/* line 347, ../sass/grayscale.scss */
+/* line 348, ../sass/grayscale.scss */
 .download-section {
   width: 100%;
   padding: 50px 0;
-  color: #fcf8e8;
+  color: #f9f6e9;
   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: #031515;
+  background-color: #081214;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 
-/* line 359, ../sass/grayscale.scss */
+/* line 360, ../sass/grayscale.scss */
 #map {
   width: 100%;
   height: 200px;
@@ -280,23 +280,23 @@ a:hover, a:focus {
 }
 
 @media (min-width: 767px) {
-  /* line 366, ../sass/grayscale.scss */
+  /* line 367, ../sass/grayscale.scss */
   .content-section {
     padding-top: 250px;
   }
 
-  /* line 370, ../sass/grayscale.scss */
+  /* line 371, ../sass/grayscale.scss */
   .download-section {
     padding: 100px 0;
   }
 
-  /* line 374, ../sass/grayscale.scss */
+  /* line 375, ../sass/grayscale.scss */
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
-/* line 380, ../sass/grayscale.scss */
+/* line 381, ../sass/grayscale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -307,127 +307,127 @@ a:hover, a:focus {
   border-radius: 0;
 }
 
-/* line 390, ../sass/grayscale.scss */
+/* line 391, ../sass/grayscale.scss */
 .btn-default {
-  border: 1px solid #ffd500;
-  color: #ffd500;
+  border: 1px solid #e2bc1c;
+  color: #e2bc1c;
   background-color: transparent;
 }
-/* line 394, ../sass/grayscale.scss */
+/* line 395, ../sass/grayscale.scss */
 .btn-default:hover, .btn-default:focus {
-  border: 1px solid #ffd500;
+  border: 1px solid #e2bc1c;
   outline: none;
-  color: #031515;
-  background-color: #ffd500;
+  color: #081214;
+  background-color: #e2bc1c;
 }
 
-/* line 403, ../sass/grayscale.scss */
+/* line 404, ../sass/grayscale.scss */
 ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
-  /* line 403, ../sass/grayscale.scss */
+  /* line 404, ../sass/grayscale.scss */
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 409, ../sass/grayscale.scss */
+  /* line 410, ../sass/grayscale.scss */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 413, ../sass/grayscale.scss */
+  /* line 414, ../sass/grayscale.scss */
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 420, ../sass/grayscale.scss */
+/* line 421, ../sass/grayscale.scss */
 footer {
   padding: 50px 0;
 }
-/* line 422, ../sass/grayscale.scss */
+/* line 423, ../sass/grayscale.scss */
 footer p {
   margin: 0;
 }
 
-/* line 427, ../sass/grayscale.scss */
+/* line 428, ../sass/grayscale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 433, ../sass/grayscale.scss */
+/* line 434, ../sass/grayscale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 439, ../sass/grayscale.scss */
+/* line 440, ../sass/grayscale.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 443, ../sass/grayscale.scss */
+/* line 444, ../sass/grayscale.scss */
 img::-moz-selection {
   background: transparent;
 }
 
-/* line 447, ../sass/grayscale.scss */
+/* line 448, ../sass/grayscale.scss */
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 451, ../sass/grayscale.scss */
+/* line 452, ../sass/grayscale.scss */
 .color {
-  color: #ffd500;
+  color: #e2bc1c;
 }
 
-/* line 454, ../sass/grayscale.scss */
+/* line 455, ../sass/grayscale.scss */
 .color-alt {
-  color: cyan;
+  color: #3aaec4;
 }
 
-/* line 458, ../sass/grayscale.scss */
+/* line 459, ../sass/grayscale.scss */
 .des-color {
-  color: #ddbe21;
+  color: #c8ac35;
 }
 
-/* line 461, ../sass/grayscale.scss */
+/* line 462, ../sass/grayscale.scss */
 .des-color-alt {
-  color: #21dddd;
+  color: #4ba1b2;
 }
 
-/* line 465, ../sass/grayscale.scss */
+/* line 466, ../sass/grayscale.scss */
 .des-color-dark {
-  color: #6e5f10;
+  color: #63551a;
 }
 
-/* line 468, ../sass/grayscale.scss */
+/* line 469, ../sass/grayscale.scss */
 .des-color-light {
-  color: #f5ebbc;
+  color: #efe6c1;
 }
 
-/* line 472, ../sass/grayscale.scss */
+/* line 473, ../sass/grayscale.scss */
 .des-color-alt-dark {
-  color: #106e6e;
+  color: #255058;
 }
 
-/* line 475, ../sass/grayscale.scss */
+/* line 476, ../sass/grayscale.scss */
 .des-color-alt-light {
-  color: #bcf5f5;
+  color: #c8e2e8;
 }
 
-/* line 479, ../sass/grayscale.scss */
+/* line 480, ../sass/grayscale.scss */
 .darker {
-  color: #031515;
+  color: #081214;
 }
 
-/* line 482, ../sass/grayscale.scss */
+/* line 483, ../sass/grayscale.scss */
 .lighter {
-  color: #fcf8e8;
+  color: #f9f6e9;
 }
