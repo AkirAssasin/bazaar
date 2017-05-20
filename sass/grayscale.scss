@@ -114,7 +114,7 @@ body {
     height: 100%;
     font-family: $secondary-font;
     color: $light;
-    background-color: $des-color-alt-dark;
+    background-color: $dark;
 }
 
 html {
@@ -238,7 +238,8 @@ a {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    //background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+		background: $des-color-alt;
     background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -388,7 +389,7 @@ a {
     border-radius: 0;
 }
 
-.btn-default {
+.btn-secondary {
     border: 1px solid $color;
     color: $color;
     background-color: transparent;
@@ -482,4 +483,60 @@ body {
 }
 .lighter {
 	color: $light;
+}
+
+.intro-static {
+    position: absolute;
+    top: 25%;
+		left: 20%;
+		height: 100%;
+    width: 60%;
+    color: #FFF;
+
+		background: transparent;
+
+		// padding: 100px 0;
+    text-align: center;
+    color: $light;
+
+		/*
+		display: table-cell;
+    vertical-align: middle;
+		*/
+    .brand-heading {
+        font-size: 40px;
+    }
+    .intro-text {
+        font-size: 18px;
+    }
+
+    @media(min-width:768px) {
+        height: 100%;
+        padding: 0;
+
+				.brand-heading {
+            font-size: 100px;
+        }
+        .intro-text {
+            font-size: 26px;
+        }
+    }
+}
+
+// CAROUS
+
+.carousel, .item, .active, .carousel-inner {
+	height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+		filter: blur(10px);
 }

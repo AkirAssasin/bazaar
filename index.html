@@ -33,7 +33,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
+    <!--
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -41,15 +41,15 @@
                     Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                  <!-- YOU MIGHT WANT TO ADD DWI EMAS LOGO HERE -->
+
                     <i class="fa fa-group"></i> <span class="light">DE</span> BAZAAR
                 </a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -64,53 +64,92 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.container -->
+
+    </nav>-->
+
+    <nav class="navbar navbar-custom fixed-top navbar-toggleable-sm" role="navigation">
+        <div class="container">
+            <button type="button" class="navbar-toggler float-right hidden-md-up"
+            data-toggle="collapse" data-target=".navbar-main-collapse">Menu <i class="fa fa-bars"></i></button>
+
+            <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-group"></i> <span class="light">DE</span> BAZAAR</a>
+        <!-- Collect the nav links, forms, and other content
+        for toggling -->
+            <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled
+            up past about section -->
+                <li class="hidden nav-item"> <a href="#page-top" class="nav-link"></a>
+                </li>
+                <li class="nav-item"> <a class="page-scroll nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item"> <a class="page-scroll nav-link" href="#booths">Booths</a>
+                </li>
+                <li class="nav-item"> <a class="page-scroll nav-link" href="#location">Location</a>
+                </li>
+            </ul>
+        <!-- /.navbar-collapse -->
+        </div>
+    <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading"><span class="light">DWI EMAS</span> BAZAAR</h1>
-                        <p>
-                          <i class="fa fa-circle lighter"></i>
-                          <i class="fa fa-circle des-color-light"></i>
-                          <i class="fa fa-circle des-color"></i>
-                          <i class="fa fa-circle color"></i>
-                          <i class="fa fa-circle des-color-dark"></i>
-                          <i class="fa fa-circle darker"></i>
-                          <i class="fa fa-circle des-color-alt-dark"></i>
-                          <i class="fa fa-circle des-color-alt"></i>
-                          <i class="fa fa-circle color-alt"></i>
-                          <i class="fa fa-circle des-color-alt-light"></i>
-                        </p>
-                        <p class="intro-text">[insert cool tagline here]</p>
-                        <!--<a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>-->
-                    </div>
-                </div>
-            </div>
+    <header id="intro-carousel" class="carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+        <div class="item carousel-item active">
+
+            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
         </div>
+
+        <div class="item carousel-item">
+            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
+        </div>
+
+        <div class="item carousel-item">
+            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
+        </div>
+
+      </div>
+
+      <div class="intro-static">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 offset-md-2">
+              <h1 class="brand-heading"><span class="light">DWI EMAS</span> BAZAAR</h1>
+              <p>
+                <i class="fa fa-circle lighter"></i>
+                <i class="fa fa-circle des-color-light"></i>
+                <i class="fa fa-circle des-color"></i>
+                <i class="fa fa-circle color"></i>
+                <i class="fa fa-circle des-color-dark"></i>
+                <i class="fa fa-circle darker"></i>
+                <i class="fa fa-circle des-color-alt-dark"></i>
+                <i class="fa fa-circle des-color-alt"></i>
+                <i class="fa fa-circle color-alt"></i>
+                <i class="fa fa-circle des-color-alt-light"></i>
+              </p>
+              <p class="intro-text">[insert cool tagline here]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </header>
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2><span class="light">Know</span> about the Bazaar</h2>
-                <p>[insert description here]</p>
-                <ul class="list-inline banner-social-buttons">
-                  <li>
-                      <a href="https://facebook.com/" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Page</span></a>
-                  </li>
-                </ul>
-            </div>
+      <div class="row">
+        <div class="col-xl-8 offset-lg-2">
+             <h2><span class="light">Know</span> about the Bazaar</h2>
+            <p>Coming soon. September 2017.</p>
+            <ul class="list-inline banner-social-buttons">
+                <li class="list-inline-item"> <a href="https://facebook.com/" class="btn btn-secondary btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook Page</span></a>
+                </li>
+            </ul>
         </div>
+    </div>
     </section>
 
     <!-- Download Section
@@ -128,33 +167,31 @@
 
     <!-- Booths Section -->
     <section id="booths" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2><span class="light">Explore</span> Booths</h2>
-                <p>[insert floor plan and interactive booths here]</p>
-                <p>Contact us to book a booth: [insert contact method here]</p>
-            </div>
+    <div class="row">
+        <div class="col-xl-8 offset-lg-2">
+             <h2><span class="light">Explore</span> Booths</h2>
+            <p>[insert floor plan and interactive booths here]</p>
+            <p>Contact us to book a booth: [insert contact method here]</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Location Section -->
     <section id="location" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2><span class="light">Find</span> Location</h2>
-                <p>No. 5, Jalan Ikhtisas 14/1, Seksyen 14, Pusat Bandar Shah Alam, 40000 Shah Alam, Selangor, Malaysia</p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://goo.gl/maps/ybBqs3SoLiQ2" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-map fa-fw"></i> <span class="network-name">Google Maps</span></a>
-                    </li>
-                    <li>
-                        <a href="waze://?ll=3.073070,101.524430" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-car fa-fw"></i> <span class="network-name">Go With Waze</span></a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </section>
+      <div class="row">
+          <div class="col-xl-8 offset-lg-2">
+               <h2><span class="light">Find</span> Location</h2>
+              <p>No. 5, Jalan Ikhtisas 14/1, Seksyen 14, Pusat Bandar Shah Alam, 40000
+                  Shah Alam, Selangor, Malaysia</p>
+              <ul class="list-inline banner-social-buttons">
+                  <li class="list-inline-item"> <a href="https://goo.gl/maps/ybBqs3SoLiQ2" target="_blank" class="btn btn-secondary btn-lg"><i class="fa fa-map fa-fw"></i> <span class="network-name">Google Maps</span></a>
+                  </li>
+                  <li class="list-inline-item"> <a href="waze://?ll=3.073070,101.524430" target="_blank" class="btn btn-secondary btn-lg"><i class="fa fa-car fa-fw"></i> <span class="network-name">Go With Waze</span></a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </section>
 
     <!-- Footer -->
     <footer>
