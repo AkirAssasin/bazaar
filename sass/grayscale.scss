@@ -86,28 +86,28 @@ $main-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $secondary-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$base-color: hsl(50, 100%, 50%);
-$base-color-alt: hsl(180, 100%, 50%);
+$base-color: hsl(45, 100%, 50%);
+$base-color-alt: hsl(200, 100%, 50%);
 
 /*
-$color: harmonious-mix($base-color-alt, $base-color);
-$color-alt: harmonious-mix($base-color, $base-color-alt);
-*/
-
 $color: $base-color;
 $color-alt: $base-color-alt;
+*/
 
-$des-color: mix-neutral($color);
-$des-color-alt: mix-neutral($color-alt);
+$color: harmonious-mix($base-color-alt, $base-color); // used for links
+$color-alt: harmonious-mix($base-color, $base-color-alt);
 
-$des-color-dark: darken($des-color,25%);
-$des-color-light: lighten($des-color,35%);
+$des-color: mix-neutral($color); // ??? can be used for nav-bar
+$des-color-alt: mix-neutral($color-alt); // ??? can be used as background
 
-$des-color-alt-dark: darken($des-color-alt,25%);
-$des-color-alt-light: lighten($des-color-alt,35%);
+$des-color-dark: darken($des-color,25%); // ??? currently used for nav-bar
+$des-color-light: lighten($des-color,35%); // used for link hover and focus
 
-$dark: darken($des-color-alt,45%);
-$light: lighten($des-color,45%);
+$des-color-alt-dark: darken($des-color-alt,25%); // used for text-div backgrounds
+$des-color-alt-light: lighten($des-color-alt,35%); // ???
+
+$dark: darken($des-color-alt,44%); // ???
+$light: lighten($des-color,45%); // used for plain text
 
 body {
     width: 100%;
@@ -147,7 +147,7 @@ p {
 }
 
 a {
-    color: $light;
+    color: $color;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -184,7 +184,10 @@ a {
         }
     }
     a {
-        color: white;
+        color: $color;
+				&:hover {
+						color: $des-color-light;
+				}
     }
     .nav {
         li {
@@ -192,6 +195,7 @@ a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
                 transition: background .3s ease-in-out;
+
                 &:hover {
                     color: $des-color-light;
                     outline: none;
@@ -207,9 +211,6 @@ a {
                 outline: none;
                 a {
                     background-color: $des-color-dark;
-                    &:hover {
-                        color: $light;
-                    }
                 }
             }
         }
@@ -224,7 +225,7 @@ a {
         transition: background .5s ease-in-out,padding .5s ease-in-out;
         &.top-nav-collapse {
             padding: 0;
-            background: black;
+            background: $dark;
             border-bottom: 1px solid $des-color-dark;
         }
     }
