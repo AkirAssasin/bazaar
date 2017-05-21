@@ -1,14 +1,19 @@
 /*
-$color: $base-color;
-$color-alt: $base-color-alt;
+$color: harmonious-mix($base-color-alt, $base-color);
+$color-alt: harmonious-mix($base-color, $base-color-alt);
 */
 /* line 112, ../sass/grayscale.scss */
 body {
   width: 100%;
   height: 100%;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+<<<<<<< HEAD
   color: #f9f6e9;
   background-color: #081214;
+=======
+  color: #fcf8e8;
+  background-color: #031515;
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 }
 
 /* line 120, ../sass/grayscale.scss */
@@ -48,7 +53,7 @@ p {
 
 /* line 149, ../sass/grayscale.scss */
 a {
-  color: #e2bc1c;
+  color: #fcf8e8;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -56,7 +61,7 @@ a {
 /* line 154, ../sass/grayscale.scss */
 a:hover, a:focus {
   text-decoration: none;
-  color: #efe6c1;
+  color: #f5ebbc;
 }
 
 /* line 161, ../sass/grayscale.scss */
@@ -70,7 +75,7 @@ a:hover, a:focus {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #081214;
+  background-color: #031515;
 }
 /* line 171, ../sass/grayscale.scss */
 .navbar-custom .navbar-toggle {
@@ -92,36 +97,36 @@ a:hover, a:focus {
 }
 /* line 186, ../sass/grayscale.scss */
 .navbar-custom a {
-  color: #e2bc1c;
+  color: white;
 }
-/* line 188, ../sass/grayscale.scss */
-.navbar-custom a:hover {
-  color: #efe6c1;
-}
-/* line 194, ../sass/grayscale.scss */
+/* line 191, ../sass/grayscale.scss */
 .navbar-custom .nav li a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
-/* line 199, ../sass/grayscale.scss */
+/* line 195, ../sass/grayscale.scss */
 .navbar-custom .nav li a:hover {
-  color: #efe6c1;
+  color: #f5ebbc;
   outline: none;
   background-color: transparent;
 }
-/* line 204, ../sass/grayscale.scss */
+/* line 200, ../sass/grayscale.scss */
 .navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
   outline: none;
   background-color: transparent;
 }
-/* line 210, ../sass/grayscale.scss */
+/* line 206, ../sass/grayscale.scss */
 .navbar-custom .nav li.active {
   outline: none;
 }
-/* line 212, ../sass/grayscale.scss */
+/* line 208, ../sass/grayscale.scss */
 .navbar-custom .nav li.active a {
-  background-color: #63551a;
+  background-color: #6e5f10;
+}
+/* line 210, ../sass/grayscale.scss */
+.navbar-custom .nav li.active a:hover {
+  color: #fcf8e8;
 }
 @media (min-width: 768px) {
   /* line 165, ../sass/grayscale.scss */
@@ -134,59 +139,89 @@ a:hover, a:focus {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
-  /* line 226, ../sass/grayscale.scss */
+  /* line 225, ../sass/grayscale.scss */
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: #081214;
-    border-bottom: 1px solid #63551a;
+    background: black;
+    border-bottom: 1px solid #6e5f10;
   }
 }
 
-/* line 234, ../sass/grayscale.scss */
+/* line 233, ../sass/grayscale.scss */
 .intro {
   display: table;
   width: 100%;
   height: auto;
   padding: 100px 0;
   text-align: center;
+<<<<<<< HEAD
   color: #f9f6e9;
   background: #4ba1b2;
   background-color: #081214;
+=======
+  color: #fcf8e8;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: #031515;
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
+<<<<<<< HEAD
 /* line 248, ../sass/grayscale.scss */
+=======
+/* line 246, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
+<<<<<<< HEAD
 /* line 251, ../sass/grayscale.scss */
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
 /* line 254, ../sass/grayscale.scss */
+=======
+/* line 249, ../sass/grayscale.scss */
+.intro .intro-body .brand-heading {
+  font-size: 40px;
+}
+/* line 252, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 234, ../sass/grayscale.scss */
+  /* line 233, ../sass/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0;
   }
+<<<<<<< HEAD
   /* line 262, ../sass/grayscale.scss */
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
   /* line 265, ../sass/grayscale.scss */
+=======
+  /* line 260, ../sass/grayscale.scss */
+  .intro .intro-body .brand-heading {
+    font-size: 100px;
+  }
+  /* line 263, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
 
+<<<<<<< HEAD
 /* line 272, ../sass/grayscale.scss */
+=======
+/* line 270, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -201,20 +236,32 @@ a:hover, a:focus {
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
+<<<<<<< HEAD
 /* line 285, ../sass/grayscale.scss */
+=======
+/* line 283, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .btn-circle:hover, .btn-circle:focus {
   outline: none;
   color: white;
   background: rgba(255, 255, 255, 0.1);
 }
+<<<<<<< HEAD
 /* line 291, ../sass/grayscale.scss */
+=======
+/* line 289, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
 }
+<<<<<<< HEAD
 /* line 298, ../sass/grayscale.scss */
+=======
+/* line 296, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .btn-circle:hover i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
@@ -254,25 +301,37 @@ a:hover, a:focus {
     transform: scale(1);
   }
 }
+<<<<<<< HEAD
 /* line 345, ../sass/grayscale.scss */
+=======
+/* line 343, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .content-section {
   padding-top: 100px;
 }
 
+<<<<<<< HEAD
 /* line 349, ../sass/grayscale.scss */
+=======
+/* line 347, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .download-section {
   width: 100%;
   padding: 50px 0;
-  color: #f9f6e9;
+  color: #fcf8e8;
   background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: #081214;
+  background-color: #031515;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
 
+<<<<<<< HEAD
 /* line 361, ../sass/grayscale.scss */
+=======
+/* line 359, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 #map {
   width: 100%;
   height: 200px;
@@ -280,23 +339,39 @@ a:hover, a:focus {
 }
 
 @media (min-width: 767px) {
+<<<<<<< HEAD
   /* line 368, ../sass/grayscale.scss */
+=======
+  /* line 366, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   .content-section {
     padding-top: 250px;
   }
 
+<<<<<<< HEAD
   /* line 372, ../sass/grayscale.scss */
+=======
+  /* line 370, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   .download-section {
     padding: 100px 0;
   }
 
+<<<<<<< HEAD
   /* line 376, ../sass/grayscale.scss */
+=======
+  /* line 374, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
+<<<<<<< HEAD
 /* line 382, ../sass/grayscale.scss */
+=======
+/* line 380, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -307,6 +382,7 @@ a:hover, a:focus {
   border-radius: 0;
 }
 
+<<<<<<< HEAD
 /* line 392, ../sass/grayscale.scss */
 .btn-secondary {
   border: 1px solid #e2bc1c;
@@ -316,120 +392,215 @@ a:hover, a:focus {
 /* line 396, ../sass/grayscale.scss */
 .btn-secondary:hover, .btn-secondary:focus {
   border: 1px solid #e2bc1c;
+=======
+/* line 390, ../sass/grayscale.scss */
+.btn-default {
+  border: 1px solid #ffd500;
+  color: #ffd500;
+  background-color: transparent;
+}
+/* line 394, ../sass/grayscale.scss */
+.btn-default:hover, .btn-default:focus {
+  border: 1px solid #ffd500;
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   outline: none;
-  color: #081214;
-  background-color: #e2bc1c;
+  color: #031515;
+  background-color: #ffd500;
 }
 
+<<<<<<< HEAD
 /* line 405, ../sass/grayscale.scss */
+=======
+/* line 403, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
+<<<<<<< HEAD
   /* line 405, ../sass/grayscale.scss */
+=======
+  /* line 403, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
+<<<<<<< HEAD
   /* line 411, ../sass/grayscale.scss */
+=======
+  /* line 409, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
+<<<<<<< HEAD
   /* line 415, ../sass/grayscale.scss */
+=======
+  /* line 413, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
 }
 
+<<<<<<< HEAD
 /* line 422, ../sass/grayscale.scss */
 footer {
   padding: 50px 0;
 }
 /* line 424, ../sass/grayscale.scss */
+=======
+/* line 420, ../sass/grayscale.scss */
+footer {
+  padding: 50px 0;
+}
+/* line 422, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 footer p {
   margin: 0;
 }
 
+<<<<<<< HEAD
 /* line 429, ../sass/grayscale.scss */
+=======
+/* line 427, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 435, ../sass/grayscale.scss */
+=======
+/* line 433, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 441, ../sass/grayscale.scss */
+=======
+/* line 439, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 img::selection {
   background: transparent;
 }
 
+<<<<<<< HEAD
 /* line 445, ../sass/grayscale.scss */
+=======
+/* line 443, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 img::-moz-selection {
   background: transparent;
 }
 
+<<<<<<< HEAD
 /* line 449, ../sass/grayscale.scss */
+=======
+/* line 447, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
+<<<<<<< HEAD
 /* line 453, ../sass/grayscale.scss */
+=======
+/* line 451, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .color {
-  color: #e2bc1c;
+  color: #ffd500;
 }
 
+<<<<<<< HEAD
 /* line 456, ../sass/grayscale.scss */
+=======
+/* line 454, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .color-alt {
-  color: #3aaec4;
+  color: cyan;
 }
 
+<<<<<<< HEAD
 /* line 460, ../sass/grayscale.scss */
+=======
+/* line 458, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color {
-  color: #c8ac35;
+  color: #ddbe21;
 }
 
+<<<<<<< HEAD
 /* line 463, ../sass/grayscale.scss */
+=======
+/* line 461, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color-alt {
-  color: #4ba1b2;
+  color: #21dddd;
 }
 
+<<<<<<< HEAD
 /* line 467, ../sass/grayscale.scss */
+=======
+/* line 465, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color-dark {
-  color: #63551a;
+  color: #6e5f10;
 }
 
+<<<<<<< HEAD
 /* line 470, ../sass/grayscale.scss */
+=======
+/* line 468, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color-light {
-  color: #efe6c1;
+  color: #f5ebbc;
 }
 
+<<<<<<< HEAD
 /* line 474, ../sass/grayscale.scss */
+=======
+/* line 472, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color-alt-dark {
-  color: #255058;
+  color: #106e6e;
 }
 
+<<<<<<< HEAD
 /* line 477, ../sass/grayscale.scss */
+=======
+/* line 475, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .des-color-alt-light {
-  color: #c8e2e8;
+  color: #bcf5f5;
 }
 
+<<<<<<< HEAD
 /* line 481, ../sass/grayscale.scss */
+=======
+/* line 479, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .darker {
-  color: #081214;
+  color: #031515;
 }
 
+<<<<<<< HEAD
 /* line 484, ../sass/grayscale.scss */
+=======
+/* line 482, ../sass/grayscale.scss */
+>>>>>>> parent of 24c3209... Waze Link and some Color Changes
 .lighter {
-  color: #f9f6e9;
+  color: #fcf8e8;
 }
 
 /* line 488, ../sass/grayscale.scss */
