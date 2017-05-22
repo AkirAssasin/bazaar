@@ -87,58 +87,57 @@ a:hover, a:focus {
 }
 /* line 184, ../sass/grayscale.scss */
 .navbar-custom .navbar-toggler {
-  padding: 6px 8px;
   font-size: 30px;
   background: #081214;
   border: 1px solid #f9f6e9;
   color: #f9f6e9;
 }
-/* line 190, ../sass/grayscale.scss */
+/* line 189, ../sass/grayscale.scss */
 .navbar-custom .navbar-toggler:focus, .navbar-custom .navbar-toggler:active {
   outline: none;
 }
-/* line 195, ../sass/grayscale.scss */
+/* line 194, ../sass/grayscale.scss */
 .navbar-custom .navbar-brand {
   font-weight: 700;
 }
-/* line 197, ../sass/grayscale.scss */
+/* line 196, ../sass/grayscale.scss */
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
-/* line 201, ../sass/grayscale.scss */
+/* line 200, ../sass/grayscale.scss */
 .navbar-custom a {
   color: #e2bc1c;
 }
-/* line 203, ../sass/grayscale.scss */
+/* line 202, ../sass/grayscale.scss */
 .navbar-custom a:hover {
   color: #efe6c1;
 }
-/* line 207, ../sass/grayscale.scss */
+/* line 206, ../sass/grayscale.scss */
 .navbar-custom .nav {
   font-family: "Advent Pro", sans-serif;
 }
-/* line 209, ../sass/grayscale.scss */
+/* line 208, ../sass/grayscale.scss */
 .navbar-custom .nav a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
-/* line 214, ../sass/grayscale.scss */
+/* line 213, ../sass/grayscale.scss */
 .navbar-custom .nav a:hover {
   color: #efe6c1;
   outline: none;
   background-color: transparent;
 }
-/* line 219, ../sass/grayscale.scss */
+/* line 218, ../sass/grayscale.scss */
 .navbar-custom .nav a:focus, .navbar-custom .nav a:active {
   outline: none;
   background-color: transparent;
 }
-/* line 225, ../sass/grayscale.scss */
+/* line 224, ../sass/grayscale.scss */
 .navbar-custom .nav.active {
   outline: none;
 }
-/* line 227, ../sass/grayscale.scss */
+/* line 226, ../sass/grayscale.scss */
 .navbar-custom .nav.active a {
   background-color: #63551a;
 }
@@ -154,19 +153,19 @@ a:hover, a:focus {
     -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
     transition: background .5s ease-in-out,padding .5s ease-in-out;
   }
-  /* line 242, ../sass/grayscale.scss */
+  /* line 241, ../sass/grayscale.scss */
   .navbar-custom.top-nav-collapse {
-    padding: 0;
+    padding: 10px 0;
     background: #081214;
     border-bottom: 1px solid rgba(249, 246, 233, 0.3);
   }
-  /* line 247, ../sass/grayscale.scss */
+  /* line 246, ../sass/grayscale.scss */
   .navbar-custom .navbar-collapse {
     padding: 0px 50px;
   }
 }
 
-/* line 253, ../sass/grayscale.scss */
+/* line 252, ../sass/grayscale.scss */
 .intro {
   display: table;
   width: 100%;
@@ -180,41 +179,41 @@ a:hover, a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-/* line 265, ../sass/grayscale.scss */
+/* line 264, ../sass/grayscale.scss */
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 269, ../sass/grayscale.scss */
+/* line 268, ../sass/grayscale.scss */
 .intro .intro-body .brand-heading {
   font-size: 50px;
 }
-/* line 272, ../sass/grayscale.scss */
+/* line 271, ../sass/grayscale.scss */
 .intro .intro-body .intro-text {
   font-size: 20px;
 }
 @media (min-width: 768px) {
-  /* line 253, ../sass/grayscale.scss */
+  /* line 252, ../sass/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0;
   }
-  /* line 280, ../sass/grayscale.scss */
+  /* line 279, ../sass/grayscale.scss */
   .intro .intro-body .brand-heading {
     font-size: 120px;
   }
-  /* line 283, ../sass/grayscale.scss */
+  /* line 282, ../sass/grayscale.scss */
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
 
-/* line 290, ../sass/grayscale.scss */
+/* line 289, ../sass/grayscale.scss */
 .content-section {
   padding-top: 100px;
 }
 
-/* line 294, ../sass/grayscale.scss */
+/* line 293, ../sass/grayscale.scss */
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -228,23 +227,23 @@ a:hover, a:focus {
 }
 
 @media (min-width: 767px) {
-  /* line 307, ../sass/grayscale.scss */
+  /* line 306, ../sass/grayscale.scss */
   .content-section {
     padding-top: 250px;
   }
 
-  /* line 311, ../sass/grayscale.scss */
+  /* line 310, ../sass/grayscale.scss */
   .download-section {
     padding: 100px 0;
   }
 
-  /* line 315, ../sass/grayscale.scss */
+  /* line 314, ../sass/grayscale.scss */
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
-/* line 321, ../sass/grayscale.scss */
+/* line 320, ../sass/grayscale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Advent Pro", sans-serif;
@@ -256,13 +255,13 @@ a:hover, a:focus {
   border-radius: 0;
 }
 
-/* line 332, ../sass/grayscale.scss */
+/* line 331, ../sass/grayscale.scss */
 .btn-secondary {
   border: 1px solid #e2bc1c;
   color: #e2bc1c;
   background-color: transparent;
 }
-/* line 336, ../sass/grayscale.scss */
+/* line 335, ../sass/grayscale.scss */
 .btn-secondary:hover, .btn-secondary:focus {
   border: 1px solid #e2bc1c;
   outline: none;
@@ -270,124 +269,124 @@ a:hover, a:focus {
   background-color: #e2bc1c;
 }
 
-/* line 345, ../sass/grayscale.scss */
+/* line 344, ../sass/grayscale.scss */
 ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
-  /* line 345, ../sass/grayscale.scss */
+  /* line 344, ../sass/grayscale.scss */
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 351, ../sass/grayscale.scss */
+  /* line 350, ../sass/grayscale.scss */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 355, ../sass/grayscale.scss */
+  /* line 354, ../sass/grayscale.scss */
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 362, ../sass/grayscale.scss */
+/* line 361, ../sass/grayscale.scss */
 footer {
   padding: 50px 0;
 }
-/* line 364, ../sass/grayscale.scss */
+/* line 363, ../sass/grayscale.scss */
 footer p {
   margin: 0;
 }
 
-/* line 369, ../sass/grayscale.scss */
+/* line 368, ../sass/grayscale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 375, ../sass/grayscale.scss */
+/* line 374, ../sass/grayscale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 381, ../sass/grayscale.scss */
+/* line 380, ../sass/grayscale.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 385, ../sass/grayscale.scss */
+/* line 384, ../sass/grayscale.scss */
 img::-moz-selection {
   background: transparent;
 }
 
-/* line 389, ../sass/grayscale.scss */
+/* line 388, ../sass/grayscale.scss */
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 393, ../sass/grayscale.scss */
+/* line 392, ../sass/grayscale.scss */
 .color {
   color: #e2bc1c;
 }
 
-/* line 396, ../sass/grayscale.scss */
+/* line 395, ../sass/grayscale.scss */
 .color-alt {
   color: #3aaec4;
 }
 
-/* line 400, ../sass/grayscale.scss */
+/* line 399, ../sass/grayscale.scss */
 .des-color {
   color: #c8ac35;
 }
 
-/* line 403, ../sass/grayscale.scss */
+/* line 402, ../sass/grayscale.scss */
 .des-color-alt {
   color: #4ba1b2;
 }
 
-/* line 407, ../sass/grayscale.scss */
+/* line 406, ../sass/grayscale.scss */
 .des-color-dark {
   color: #63551a;
 }
 
-/* line 410, ../sass/grayscale.scss */
+/* line 409, ../sass/grayscale.scss */
 .des-color-light {
   color: #efe6c1;
 }
 
-/* line 414, ../sass/grayscale.scss */
+/* line 413, ../sass/grayscale.scss */
 .des-color-alt-dark {
   color: #255058;
 }
 
-/* line 417, ../sass/grayscale.scss */
+/* line 416, ../sass/grayscale.scss */
 .des-color-alt-light {
   color: #c1dfe5;
 }
 
-/* line 421, ../sass/grayscale.scss */
+/* line 420, ../sass/grayscale.scss */
 .darker {
   color: #081214;
 }
 
-/* line 424, ../sass/grayscale.scss */
+/* line 423, ../sass/grayscale.scss */
 .lighter {
   color: #f9f6e9;
 }
 
-/* line 428, ../sass/grayscale.scss */
+/* line 427, ../sass/grayscale.scss */
 #map {
   margin: 20px;
   overflow: hidden;
 }
 
-/* line 433, ../sass/grayscale.scss */
+/* line 432, ../sass/grayscale.scss */
 svg {
   width: 100%;
   height: 100%;

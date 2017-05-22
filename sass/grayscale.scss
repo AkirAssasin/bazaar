@@ -182,7 +182,6 @@ a {
     background-color: transparent;
 
     .navbar-toggler {
-				padding: 6px 8px;
         font-size: 30px;
 				background: $dark;
 				border: 1px solid $light;
@@ -240,7 +239,7 @@ a {
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
         &.top-nav-collapse {
-            padding: 0;
+            padding: 10px 0;
             background: $dark;
             border-bottom: 1px solid transparentize($light,0.7);
         }
