@@ -410,3 +410,16 @@ body {
 .lighter {
   color: #f9f6e9;
 }
+
+/* line 458, ../sass/grayscale.scss */
+#map {
+  margin: 10px;
+  overflow: hidden;
+}
+
+/* line 463, ../sass/grayscale.scss */
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

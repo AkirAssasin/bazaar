@@ -454,3 +454,14 @@ body {
 .lighter {
 	color: $light;
 }
+
+#map {
+	margin: 10px;
+	overflow: hidden;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+	display: block;
+}

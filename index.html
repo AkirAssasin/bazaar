@@ -39,9 +39,6 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbar">
-        <!--<div class="container">-->
-            <!--<button type="button" class="navbar-toggler float-right hidden-md-up"
-            data-toggle="collapse" data-target="#navbar">Menu <i class="fa fa-bars"></i></button>-->
 
             <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-group"></i> <span class="light">DE</span> BAZAAR</a>
 
@@ -56,69 +53,13 @@
             <a class="page-scroll nav-item nav-link" href="#location">Location</a>
           </div>
 
-            <!--<ul class="nav navbar-nav">
-                <li class="hidden nav-item"> <a href="#page-top" class="nav-link"></a>
-                </li>
-                <li class="nav-item"> <a class="page-scroll nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item"> <a class="page-scroll nav-link" href="#booths">Booths</a>
-                </li>
-                <li class="nav-item"> <a class="page-scroll nav-link" href="#location">Location</a>
-                </li>
-            </ul>-->
         </div>
     </nav>
-
-    <!--<header id="intro-carousel" class="carousel slide" data-ride="carousel">
-
-      <div class="carousel-inner" role="listbox">
-
-        <div class="item carousel-item active">
-
-            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
-        </div>
-
-        <div class="item carousel-item">
-            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
-        </div>
-
-        <div class="item carousel-item">
-            <div class="fill" style="background-image:url('img/intro-bg.jpg');"></div>
-        </div>
-
-      </div>
-
-      <div class="intro-static">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-md-2">
-              <h1 class="brand-heading"><span class="light">DWI EMAS</span> BAZAAR</h1>
-              <p>
-                <i class="fa fa-circle lighter"></i>
-                <i class="fa fa-circle des-color-light"></i>
-                <i class="fa fa-circle des-color"></i>
-                <i class="fa fa-circle color"></i>
-                <i class="fa fa-circle des-color-dark"></i>
-                <i class="fa fa-circle darker"></i>
-                <i class="fa fa-circle des-color-alt-dark"></i>
-                <i class="fa fa-circle des-color-alt"></i>
-                <i class="fa fa-circle color-alt"></i>
-                <i class="fa fa-circle des-color-alt-light"></i>
-              </p>
-              <p class="intro-text">[insert cool tagline here]</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </header>-->
 
     <header class="intro">
 
       <div class="intro-body">
-        <!--<div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-md-2">-->
+
               <h1 class="brand-heading">DWI EMAS<br/><span class="boost-size">BAZAAR</span></h1>
               <p>
                 <i class="fa fa-circle lighter"></i>
@@ -133,9 +74,7 @@
                 <i class="fa fa-circle des-color-alt-light"></i>
               </p>
               <p class="intro-text">[insert cool tagline here]</p>
-            <!--</div>
-          </div>
-        </div>-->
+
       </div>
 
     </header>
@@ -154,25 +93,14 @@
     </div>
     </section>
 
-    <!-- Download Section
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download Grayscale</h2>
-                    <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
-                </div>
-            </div>
-        </div>
-    </section>-->
-
     <!-- Booths Section -->
     <section id="booths" class="container content-section text-center">
     <div class="row">
         <div class="col-xl-8 offset-lg-2">
              <h2><span class="light">Explore</span> Booths</h2>
-            <p>[insert floor plan and interactive booths here]</p>
+             <div id="map">
+               <!-- Raphaël JS Map Here -->
+             </div>
             <p>Contact us to book a booth: [insert contact method here]</p>
         </div>
     </div>
@@ -213,6 +141,8 @@
 
     <!-- Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script src="js/raphael.min.js"></script>
+    <script src="js/map.js"></script>
 
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
