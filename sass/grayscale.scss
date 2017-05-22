@@ -174,7 +174,8 @@ a {
 }
 
 .navbar-custom {
-    margin-bottom: 0;
+		display: none;
+		margin-bottom: 0;
     border: none;
     text-transform: uppercase;
     font-family: $main-font;
@@ -184,7 +185,8 @@ a {
 				padding: 6px 8px;
         font-size: 30px;
 				background: $dark;
-        color: white;
+				border: 1px solid $light;
+        color: $light;
         &:focus,
         &:active {
             outline: none;
@@ -229,6 +231,7 @@ a {
     }
 
     @media(min-width:768px) {
+				display: block;
         padding: 20px 0;
         border-bottom: none;
         letter-spacing: 1px;
@@ -254,7 +257,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: linear-gradient(0deg, $dark, transparent, $dark), url(../img/Buildings.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -262,6 +265,7 @@ a {
     .intro-body {
         display: table-cell;
         vertical-align: middle;
+				//background: linear-gradient(0deg, $dark, transparent, $dark);
         .brand-heading {
             font-size: 50px;
         }
@@ -282,40 +286,6 @@ a {
         }
     }
 }
-
-/*@-webkit-keyframes pulse {
-    from {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-}
-
-@-moz-keyframes pulse {
-    from {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-
-    50% {
-        -moz-transform: scale(1.2);
-        transform: scale(1.2);
-    }
-
-    100% {
-        -moz-transform: scale(1);
-        transform: scale(1);
-    }
-}*/
 
 .content-section {
     padding-top: 100px;
@@ -456,7 +426,7 @@ body {
 }
 
 #map {
-	margin: 10px;
+	margin: 20px;
 	overflow: hidden;
 }
 
