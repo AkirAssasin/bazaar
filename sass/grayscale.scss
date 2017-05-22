@@ -164,11 +164,12 @@ a {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid rgba(white, 0.3);
+    border-bottom: 1px solid transparentize($light,0.7);
     text-transform: uppercase;
     font-family: $main-font;
     background-color: $dark;
-    .navbar-toggle {
+
+    .navbar-toggler {
         padding: 4px 6px;
         font-size: 16px;
         color: white;
@@ -190,31 +191,30 @@ a {
 				}
     }
     .nav {
-        li {
-            a {
-                -webkit-transition: background .3s ease-in-out;
-                -moz-transition: background .3s ease-in-out;
-                transition: background .3s ease-in-out;
+        a {
+          	-webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
 
-                &:hover {
-                    color: $des-color-light;
-                    outline: none;
-                    background-color: transparent;
-                }
-                &:focus,
-                &:active {
-                    outline: none;
-                    background-color: transparent;
-                }
-            }
-            &.active {
+            &:hover {
+                color: $des-color-light;
                 outline: none;
-                a {
-                    background-color: $des-color-dark;
-                }
+                background-color: transparent;
+            }
+            &:focus,
+            &:active {
+                outline: none;
+                background-color: transparent;
+            }
+        }
+        &.active {
+            outline: none;
+            a {
+                background-color: $des-color-dark;
             }
         }
     }
+
     @media(min-width:768px) {
         padding: 20px 0;
         border-bottom: none;
@@ -228,6 +228,9 @@ a {
             background: $dark;
             border-bottom: 1px solid $des-color-dark;
         }
+				.navbar-collapse {
+					padding: 0px 50px;
+				}
     }
 }
 
@@ -238,9 +241,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    //background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
-		background: $des-color-alt;
-    background-color: $dark;
+    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -538,5 +539,5 @@ body {
     background-size: cover;
     -o-background-size: cover;
 
-		filter: blur(10px);
+		//filter: blur(10px);
 }

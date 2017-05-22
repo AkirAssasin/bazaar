@@ -67,60 +67,60 @@ a:hover, a:focus {
 /* line 165, ../sass/grayscale.scss */
 .navbar-custom {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(249, 246, 233, 0.3);
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #081214;
 }
-/* line 171, ../sass/grayscale.scss */
-.navbar-custom .navbar-toggle {
+/* line 172, ../sass/grayscale.scss */
+.navbar-custom .navbar-toggler {
   padding: 4px 6px;
   font-size: 16px;
   color: white;
 }
-/* line 175, ../sass/grayscale.scss */
-.navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
+/* line 176, ../sass/grayscale.scss */
+.navbar-custom .navbar-toggler:focus, .navbar-custom .navbar-toggler:active {
   outline: none;
 }
-/* line 180, ../sass/grayscale.scss */
+/* line 181, ../sass/grayscale.scss */
 .navbar-custom .navbar-brand {
   font-weight: 700;
 }
-/* line 182, ../sass/grayscale.scss */
+/* line 183, ../sass/grayscale.scss */
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
-/* line 186, ../sass/grayscale.scss */
+/* line 187, ../sass/grayscale.scss */
 .navbar-custom a {
   color: #e2bc1c;
 }
-/* line 188, ../sass/grayscale.scss */
+/* line 189, ../sass/grayscale.scss */
 .navbar-custom a:hover {
   color: #efe6c1;
 }
 /* line 194, ../sass/grayscale.scss */
-.navbar-custom .nav li a {
+.navbar-custom .nav a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
 /* line 199, ../sass/grayscale.scss */
-.navbar-custom .nav li a:hover {
+.navbar-custom .nav a:hover {
   color: #efe6c1;
   outline: none;
   background-color: transparent;
 }
 /* line 204, ../sass/grayscale.scss */
-.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
+.navbar-custom .nav a:focus, .navbar-custom .nav a:active {
   outline: none;
   background-color: transparent;
 }
 /* line 210, ../sass/grayscale.scss */
-.navbar-custom .nav li.active {
+.navbar-custom .nav.active {
   outline: none;
 }
 /* line 212, ../sass/grayscale.scss */
-.navbar-custom .nav li.active a {
+.navbar-custom .nav.active a {
   background-color: #63551a;
 }
 @media (min-width: 768px) {
@@ -140,9 +140,13 @@ a:hover, a:focus {
     background: #081214;
     border-bottom: 1px solid #63551a;
   }
+  /* line 231, ../sass/grayscale.scss */
+  .navbar-custom .navbar-collapse {
+    padding: 0px 50px;
+  }
 }
 
-/* line 234, ../sass/grayscale.scss */
+/* line 237, ../sass/grayscale.scss */
 .intro {
   display: table;
   width: 100%;
@@ -150,43 +154,42 @@ a:hover, a:focus {
   padding: 100px 0;
   text-align: center;
   color: #f9f6e9;
-  background: #4ba1b2;
-  background-color: #081214;
+  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
 }
-/* line 248, ../sass/grayscale.scss */
+/* line 249, ../sass/grayscale.scss */
 .intro .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 251, ../sass/grayscale.scss */
+/* line 252, ../sass/grayscale.scss */
 .intro .intro-body .brand-heading {
   font-size: 40px;
 }
-/* line 254, ../sass/grayscale.scss */
+/* line 255, ../sass/grayscale.scss */
 .intro .intro-body .intro-text {
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 234, ../sass/grayscale.scss */
+  /* line 237, ../sass/grayscale.scss */
   .intro {
     height: 100%;
     padding: 0;
   }
-  /* line 262, ../sass/grayscale.scss */
+  /* line 263, ../sass/grayscale.scss */
   .intro .intro-body .brand-heading {
     font-size: 100px;
   }
-  /* line 265, ../sass/grayscale.scss */
+  /* line 266, ../sass/grayscale.scss */
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
 
-/* line 272, ../sass/grayscale.scss */
+/* line 273, ../sass/grayscale.scss */
 .btn-circle {
   width: 70px;
   height: 70px;
@@ -201,20 +204,20 @@ a:hover, a:focus {
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
 }
-/* line 285, ../sass/grayscale.scss */
+/* line 286, ../sass/grayscale.scss */
 .btn-circle:hover, .btn-circle:focus {
   outline: none;
   color: white;
   background: rgba(255, 255, 255, 0.1);
 }
-/* line 291, ../sass/grayscale.scss */
+/* line 292, ../sass/grayscale.scss */
 .btn-circle i.animated {
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-duration: 1s;
   -moz-transition-property: -moz-transform;
   -moz-transition-duration: 1s;
 }
-/* line 298, ../sass/grayscale.scss */
+/* line 299, ../sass/grayscale.scss */
 .btn-circle:hover i.animated {
   -webkit-animation-name: pulse;
   -moz-animation-name: pulse;
@@ -254,12 +257,12 @@ a:hover, a:focus {
     transform: scale(1);
   }
 }
-/* line 345, ../sass/grayscale.scss */
+/* line 346, ../sass/grayscale.scss */
 .content-section {
   padding-top: 100px;
 }
 
-/* line 349, ../sass/grayscale.scss */
+/* line 350, ../sass/grayscale.scss */
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -272,7 +275,7 @@ a:hover, a:focus {
   -o-background-size: cover;
 }
 
-/* line 361, ../sass/grayscale.scss */
+/* line 362, ../sass/grayscale.scss */
 #map {
   width: 100%;
   height: 200px;
@@ -280,23 +283,23 @@ a:hover, a:focus {
 }
 
 @media (min-width: 767px) {
-  /* line 368, ../sass/grayscale.scss */
+  /* line 369, ../sass/grayscale.scss */
   .content-section {
     padding-top: 250px;
   }
 
-  /* line 372, ../sass/grayscale.scss */
+  /* line 373, ../sass/grayscale.scss */
   .download-section {
     padding: 100px 0;
   }
 
-  /* line 376, ../sass/grayscale.scss */
+  /* line 377, ../sass/grayscale.scss */
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
-/* line 382, ../sass/grayscale.scss */
+/* line 383, ../sass/grayscale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -307,13 +310,13 @@ a:hover, a:focus {
   border-radius: 0;
 }
 
-/* line 392, ../sass/grayscale.scss */
+/* line 393, ../sass/grayscale.scss */
 .btn-secondary {
   border: 1px solid #e2bc1c;
   color: #e2bc1c;
   background-color: transparent;
 }
-/* line 396, ../sass/grayscale.scss */
+/* line 397, ../sass/grayscale.scss */
 .btn-secondary:hover, .btn-secondary:focus {
   border: 1px solid #e2bc1c;
   outline: none;
@@ -321,118 +324,118 @@ a:hover, a:focus {
   background-color: #e2bc1c;
 }
 
-/* line 405, ../sass/grayscale.scss */
+/* line 406, ../sass/grayscale.scss */
 ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
-  /* line 405, ../sass/grayscale.scss */
+  /* line 406, ../sass/grayscale.scss */
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 411, ../sass/grayscale.scss */
+  /* line 412, ../sass/grayscale.scss */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 415, ../sass/grayscale.scss */
+  /* line 416, ../sass/grayscale.scss */
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 422, ../sass/grayscale.scss */
+/* line 423, ../sass/grayscale.scss */
 footer {
   padding: 50px 0;
 }
-/* line 424, ../sass/grayscale.scss */
+/* line 425, ../sass/grayscale.scss */
 footer p {
   margin: 0;
 }
 
-/* line 429, ../sass/grayscale.scss */
+/* line 430, ../sass/grayscale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 435, ../sass/grayscale.scss */
+/* line 436, ../sass/grayscale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 441, ../sass/grayscale.scss */
+/* line 442, ../sass/grayscale.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 445, ../sass/grayscale.scss */
+/* line 446, ../sass/grayscale.scss */
 img::-moz-selection {
   background: transparent;
 }
 
-/* line 449, ../sass/grayscale.scss */
+/* line 450, ../sass/grayscale.scss */
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 453, ../sass/grayscale.scss */
+/* line 454, ../sass/grayscale.scss */
 .color {
   color: #e2bc1c;
 }
 
-/* line 456, ../sass/grayscale.scss */
+/* line 457, ../sass/grayscale.scss */
 .color-alt {
   color: #3aaec4;
 }
 
-/* line 460, ../sass/grayscale.scss */
+/* line 461, ../sass/grayscale.scss */
 .des-color {
   color: #c8ac35;
 }
 
-/* line 463, ../sass/grayscale.scss */
+/* line 464, ../sass/grayscale.scss */
 .des-color-alt {
   color: #4ba1b2;
 }
 
-/* line 467, ../sass/grayscale.scss */
+/* line 468, ../sass/grayscale.scss */
 .des-color-dark {
   color: #63551a;
 }
 
-/* line 470, ../sass/grayscale.scss */
+/* line 471, ../sass/grayscale.scss */
 .des-color-light {
   color: #efe6c1;
 }
 
-/* line 474, ../sass/grayscale.scss */
+/* line 475, ../sass/grayscale.scss */
 .des-color-alt-dark {
   color: #255058;
 }
 
-/* line 477, ../sass/grayscale.scss */
+/* line 478, ../sass/grayscale.scss */
 .des-color-alt-light {
   color: #c8e2e8;
 }
 
-/* line 481, ../sass/grayscale.scss */
+/* line 482, ../sass/grayscale.scss */
 .darker {
   color: #081214;
 }
 
-/* line 484, ../sass/grayscale.scss */
+/* line 485, ../sass/grayscale.scss */
 .lighter {
   color: #f9f6e9;
 }
 
-/* line 488, ../sass/grayscale.scss */
+/* line 489, ../sass/grayscale.scss */
 .intro-static {
   position: absolute;
   top: 25%;
@@ -448,36 +451,36 @@ body {
       vertical-align: middle;
   		*/
 }
-/* line 506, ../sass/grayscale.scss */
+/* line 507, ../sass/grayscale.scss */
 .intro-static .brand-heading {
   font-size: 40px;
 }
-/* line 509, ../sass/grayscale.scss */
+/* line 510, ../sass/grayscale.scss */
 .intro-static .intro-text {
   font-size: 18px;
 }
 @media (min-width: 768px) {
-  /* line 488, ../sass/grayscale.scss */
+  /* line 489, ../sass/grayscale.scss */
   .intro-static {
     height: 100%;
     padding: 0;
   }
-  /* line 517, ../sass/grayscale.scss */
+  /* line 518, ../sass/grayscale.scss */
   .intro-static .brand-heading {
     font-size: 100px;
   }
-  /* line 520, ../sass/grayscale.scss */
+  /* line 521, ../sass/grayscale.scss */
   .intro-static .intro-text {
     font-size: 26px;
   }
 }
 
-/* line 528, ../sass/grayscale.scss */
+/* line 529, ../sass/grayscale.scss */
 .carousel, .item, .active, .carousel-inner {
   height: 100%;
 }
 
-/* line 532, ../sass/grayscale.scss */
+/* line 533, ../sass/grayscale.scss */
 .fill {
   width: 100%;
   height: 100%;
@@ -486,5 +489,4 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  filter: blur(10px);
 }
