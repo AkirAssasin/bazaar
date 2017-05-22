@@ -82,9 +82,14 @@
 	}
 }
 
-$main-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("fonts/BebasNeue.otf") format("opentype");
+}
+
+$main-font: "Bebas Neue", sans-serif;
 //$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$secondary-font: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-font: "Advent Pro", sans-serif;
 
 $base-color: hsl(45, 100%, 50%);
 $base-color-alt: hsl(200, 100%, 50%);
@@ -137,11 +142,11 @@ h6 {
 
 p {
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     @media(min-width:768px) {
         margin: 0 0 35px;
-        font-size: 20px;
+        font-size: 25px;
         line-height: 1.6;
     }
 }
@@ -160,6 +165,12 @@ a {
 
 .light {
     font-weight: 400;
+		font-family: $secondary-font;
+		font-size: 90%;
+		text-align: center center;
+}
+.boost-size {
+		font-size: 200%;
 }
 
 .navbar-custom {
@@ -192,6 +203,7 @@ a {
 				}
     }
     .nav {
+			font-family: $secondary-font;
         a {
           	-webkit-transition: background .3s ease-in-out;
             -moz-transition: background .3s ease-in-out;
@@ -251,10 +263,10 @@ a {
         display: table-cell;
         vertical-align: middle;
         .brand-heading {
-            font-size: 40px;
+            font-size: 50px;
         }
         .intro-text {
-            font-size: 18px;
+            font-size: 20px;
         }
     }
     @media(min-width:768px) {
@@ -262,7 +274,7 @@ a {
         padding: 0;
         .intro-body {
             .brand-heading {
-                font-size: 100px;
+                font-size: 120px;
             }
             .intro-text {
                 font-size: 26px;
@@ -271,46 +283,7 @@ a {
     }
 }
 
-.btn-circle {
-    width: 70px;
-    height: 70px;
-    margin-top: 15px;
-    padding: 7px 16px;
-    border: 2px solid white;
-    border-radius: 100% !important;
-    font-size: 40px;
-    color: white;
-    background: transparent;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-    &:hover,
-    &:focus {
-        outline: none;
-        color: white;
-        background: rgba(white, 0.1);
-    }
-    i.animated {
-        -webkit-transition-property: -webkit-transform;
-        -webkit-transition-duration: 1s;
-        -moz-transition-property: -moz-transform;
-        -moz-transition-duration: 1s;
-    }
-    &:hover {
-        i.animated {
-            -webkit-animation-name: pulse;
-            -moz-animation-name: pulse;
-            -webkit-animation-duration: 1.5s;
-            -moz-animation-duration: 1.5s;
-            -webkit-animation-iteration-count: infinite;
-            -moz-animation-iteration-count: infinite;
-            -webkit-animation-timing-function: linear;
-            -moz-animation-timing-function: linear;
-        }
-    }
-}
-
-@-webkit-keyframes pulse {
+/*@-webkit-keyframes pulse {
     from {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -342,7 +315,7 @@ a {
         -moz-transform: scale(1);
         transform: scale(1);
     }
-}
+}*/
 
 .content-section {
     padding-top: 100px;
@@ -358,12 +331,6 @@ a {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
 }
 
 @media(min-width:767px) {
@@ -383,7 +350,8 @@ a {
 
 .btn {
     text-transform: uppercase;
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $secondary-font;
+		font-size: 30px;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -485,60 +453,4 @@ body {
 }
 .lighter {
 	color: $light;
-}
-
-.intro-static {
-    position: absolute;
-    top: 25%;
-		left: 20%;
-		height: 100%;
-    width: 60%;
-    color: #FFF;
-
-		background: transparent;
-
-		// padding: 100px 0;
-    text-align: center;
-    color: $light;
-
-		/*
-		display: table-cell;
-    vertical-align: middle;
-		*/
-    .brand-heading {
-        font-size: 40px;
-    }
-    .intro-text {
-        font-size: 18px;
-    }
-
-    @media(min-width:768px) {
-        height: 100%;
-        padding: 0;
-
-				.brand-heading {
-            font-size: 100px;
-        }
-        .intro-text {
-            font-size: 26px;
-        }
-    }
-}
-
-// CAROUS
-
-.carousel, .item, .active, .carousel-inner {
-	height: 100%;
-}
-
-.fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-
-		//filter: blur(10px);
 }
