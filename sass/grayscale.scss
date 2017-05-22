@@ -104,7 +104,7 @@ $des-color-dark: darken($des-color,25%); // ??? currently used for nav-bar
 $des-color-light: lighten($des-color,35%); // used for link hover and focus
 
 $des-color-alt-dark: darken($des-color-alt,25%); // used for text-div backgrounds
-$des-color-alt-light: lighten($des-color-alt,35%); // ???
+$des-color-alt-light: lighten($des-color-alt,33%); // ???
 
 $dark: darken($des-color-alt,44%); // ???
 $light: lighten($des-color,45%); // used for plain text
@@ -164,14 +164,15 @@ a {
 
 .navbar-custom {
     margin-bottom: 0;
-    border-bottom: 1px solid transparentize($light,0.7);
+    border: none;
     text-transform: uppercase;
     font-family: $main-font;
-    background-color: $dark;
+    background-color: transparent;
 
     .navbar-toggler {
-        padding: 4px 6px;
-        font-size: 16px;
+				padding: 6px 8px;
+        font-size: 30px;
+				background: $dark;
         color: white;
         &:focus,
         &:active {
@@ -226,7 +227,7 @@ a {
         &.top-nav-collapse {
             padding: 0;
             background: $dark;
-            border-bottom: 1px solid $des-color-dark;
+            border-bottom: 1px solid transparentize($light,0.7);
         }
 				.navbar-collapse {
 					padding: 0px 50px;
@@ -237,7 +238,7 @@ a {
 .intro {
     display: table;
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
     color: $light;
