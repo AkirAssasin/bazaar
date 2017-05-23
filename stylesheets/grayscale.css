@@ -210,17 +210,18 @@ a:hover, a:focus {
 
 /* line 291, ../sass/grayscale.scss */
 .content-section {
-  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-top: 0px;
 }
 
-/* line 295, ../sass/grayscale.scss */
+/* line 296, ../sass/grayscale.scss */
 .booth-section {
   width: 100%;
   height: 100%;
   padding-top: 100px;
 }
 
-/* line 301, ../sass/grayscale.scss */
+/* line 302, ../sass/grayscale.scss */
 .download-section {
   width: 100%;
   padding: 50px 0;
@@ -234,23 +235,23 @@ a:hover, a:focus {
 }
 
 @media (min-width: 767px) {
-  /* line 314, ../sass/grayscale.scss */
+  /* line 315, ../sass/grayscale.scss */
   .content-section {
     padding-top: 250px;
   }
 
-  /* line 318, ../sass/grayscale.scss */
+  /* line 319, ../sass/grayscale.scss */
   .download-section {
     padding: 100px 0;
   }
 
-  /* line 322, ../sass/grayscale.scss */
+  /* line 323, ../sass/grayscale.scss */
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
-/* line 328, ../sass/grayscale.scss */
+/* line 329, ../sass/grayscale.scss */
 .btn {
   text-transform: uppercase;
   font-family: "Advent Pro", sans-serif;
@@ -262,13 +263,13 @@ a:hover, a:focus {
   border-radius: 0;
 }
 
-/* line 339, ../sass/grayscale.scss */
+/* line 340, ../sass/grayscale.scss */
 .btn-secondary {
   border: 1px solid #e2bc1c;
   color: #e2bc1c;
   background-color: transparent;
 }
-/* line 343, ../sass/grayscale.scss */
+/* line 344, ../sass/grayscale.scss */
 .btn-secondary:hover, .btn-secondary:focus {
   border: 1px solid #e2bc1c;
   outline: none;
@@ -276,123 +277,123 @@ a:hover, a:focus {
   background-color: #e2bc1c;
 }
 
-/* line 352, ../sass/grayscale.scss */
+/* line 353, ../sass/grayscale.scss */
 ul.banner-social-buttons {
   margin-top: 0;
 }
 @media (max-width: 1199px) {
-  /* line 352, ../sass/grayscale.scss */
+  /* line 353, ../sass/grayscale.scss */
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 @media (max-width: 767px) {
-  /* line 358, ../sass/grayscale.scss */
+  /* line 359, ../sass/grayscale.scss */
   ul.banner-social-buttons li {
     display: block;
     margin-bottom: 20px;
     padding: 0;
   }
-  /* line 362, ../sass/grayscale.scss */
+  /* line 363, ../sass/grayscale.scss */
   ul.banner-social-buttons li:last-child {
     margin-bottom: 0;
   }
 }
 
-/* line 369, ../sass/grayscale.scss */
+/* line 370, ../sass/grayscale.scss */
 footer {
   padding: 50px 0;
 }
-/* line 371, ../sass/grayscale.scss */
+/* line 372, ../sass/grayscale.scss */
 footer p {
   margin: 0;
 }
 
-/* line 376, ../sass/grayscale.scss */
+/* line 377, ../sass/grayscale.scss */
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 382, ../sass/grayscale.scss */
+/* line 383, ../sass/grayscale.scss */
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 388, ../sass/grayscale.scss */
+/* line 389, ../sass/grayscale.scss */
 img::selection {
   background: transparent;
 }
 
-/* line 392, ../sass/grayscale.scss */
+/* line 393, ../sass/grayscale.scss */
 img::-moz-selection {
   background: transparent;
 }
 
-/* line 396, ../sass/grayscale.scss */
+/* line 397, ../sass/grayscale.scss */
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 400, ../sass/grayscale.scss */
+/* line 401, ../sass/grayscale.scss */
 .color {
   color: #e2bc1c;
 }
 
-/* line 403, ../sass/grayscale.scss */
+/* line 404, ../sass/grayscale.scss */
 .color-alt {
   color: #3aaec4;
 }
 
-/* line 407, ../sass/grayscale.scss */
+/* line 408, ../sass/grayscale.scss */
 .des-color {
   color: #c8ac35;
 }
 
-/* line 410, ../sass/grayscale.scss */
+/* line 411, ../sass/grayscale.scss */
 .des-color-alt {
   color: #4ba1b2;
 }
 
-/* line 414, ../sass/grayscale.scss */
+/* line 415, ../sass/grayscale.scss */
 .des-color-dark {
   color: #63551a;
 }
 
-/* line 417, ../sass/grayscale.scss */
+/* line 418, ../sass/grayscale.scss */
 .des-color-light {
   color: #e4d699;
 }
 
-/* line 421, ../sass/grayscale.scss */
+/* line 422, ../sass/grayscale.scss */
 .des-color-alt-dark {
   color: #255058;
 }
 
-/* line 424, ../sass/grayscale.scss */
+/* line 425, ../sass/grayscale.scss */
 .des-color-alt-light {
   color: #a4d0d9;
 }
 
-/* line 428, ../sass/grayscale.scss */
+/* line 429, ../sass/grayscale.scss */
 .des-color-alt-darker {
   color: #162f34;
 }
 
-/* line 432, ../sass/grayscale.scss */
+/* line 433, ../sass/grayscale.scss */
 .darker {
   color: #081214;
 }
 
-/* line 435, ../sass/grayscale.scss */
+/* line 436, ../sass/grayscale.scss */
 .lighter {
   color: #f9f6e9;
 }
 
-/* line 439, ../sass/grayscale.scss */
+/* line 440, ../sass/grayscale.scss */
 #map {
   padding: 10px 100px;
   margin: 0px;
@@ -401,7 +402,7 @@ body {
   overflow: hidden;
 }
 
-/* line 447, ../sass/grayscale.scss */
+/* line 448, ../sass/grayscale.scss */
 svg {
   width: 100%;
   height: 100%;
