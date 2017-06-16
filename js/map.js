@@ -39,7 +39,7 @@ function drawSVGPaths (data, tabletop) {
   floorPlan.attr({"fill":floorFill,"stroke":floorOutline,"type":"path"});
 
   var outdoorPlan = map.path("M350 100L360 90L370 90L370 10L380 0L580 0L590 10L590 150L580 160L560 160L550 170L360 170L350 160L350 100Z");
-  outdoorPlan.attr({"fill":fieldFill,"opacity":"0.25","stroke":fieldOutline,"type":"path"});
+  outdoorPlan.attr({"fill":fieldFill,"opacity":"0.5","stroke":fieldOutline,"type":"path"});
 
 
   for (var i = 0; i < data.length; i++) {
@@ -72,6 +72,7 @@ function drawSVGPaths (data, tabletop) {
       this.node.style.opacity = 0.8;
     });*/
 
+    /*
     booth.mousedown(function(e) {
 
       var posx;
@@ -125,7 +126,7 @@ function drawSVGPaths (data, tabletop) {
           //$infobox.css({'top': ($map.offset().top + $map.height()/2  - $infobox.height()/2) + 'px'});
 
 
-          console.log(posy,$map.offset().top + $map.height()/2);
+          //console.log(posy,$map.offset().top + $map.height()/2);
 
           //var exceed = $map.offset().top + $map.height();
           //var currenty = 0;
@@ -145,7 +146,7 @@ function drawSVGPaths (data, tabletop) {
           //}
 
         }
-      });
+      });*/
 
       $infobox.on('click', '.booth-info-close', function(e){
 

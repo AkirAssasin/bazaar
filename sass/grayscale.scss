@@ -111,7 +111,7 @@ $des-color-light: lighten($des-color,25%); // used for link hover and focus
 $des-color-alt-dark: darken($des-color-alt,25%); // used for text-div backgrounds
 $des-color-alt-light: lighten($des-color-alt,25%); // ???
 
-$des-color-alt-darker: darken($des-color-alt,35%); // used for text-div backgrounds
+$des-color-alt-darker: darken($des-color-alt,42%); // used for text-div backgrounds
 
 $dark: darken($des-color-alt,44%); // ???
 $light: lighten($des-color,45%); // used for plain text
@@ -259,7 +259,8 @@ a {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: linear-gradient(0deg, $dark, transparent, $dark), url(../img/landing-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
+		background-color: $des-color-alt-darker;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -287,6 +288,8 @@ a {
             }
         }
     }
+
+		//@include skew(0,1);
 }
 
 .content-section {
@@ -307,90 +310,68 @@ a {
     padding: 0px;
 }
 
-.about-banner {
-	width: 100%;
-	padding: 50px 0;
-	margin: 50px 0;
-	color: $light;
-	background: url(../img/haunted-bg.jpg) no-repeat center center scroll;
-	background-color: $dark;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
+@mixin banner ($background, $y) {
+width: 100%;
+	background: $background;
+ background-color: $des-color-alt-darker;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ -o-background-size: cover;
+ @include skew(0,$y);
 
-	@include skew(0,-0.5);
+}
+
+$tilt: 1;
+$empty-banner-padding: 50px;
+$empty-banner-fit: 100px;
+$banner-margin: 50px;
+
+.about-banner {
+	padding: 50px 0;
+	margin: $banner-margin 0;
+	color: $light;
+
+	@include banner(url(../img/about-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
 .futsal-banner {
-    width: 100%;
     padding: 50px 0;
-		margin: 50px 0;
+		margin: $banner-margin 0;
     color: $light;
-    background: url(../img/futsal-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+
+		@include banner(url(../img/futsal-bg.jpg) no-repeat center center scroll,$tilt);
 }
 
 .haunted-banner {
-    width: 100%;
 		padding: 50px 0;
-		margin: 50px 0;
+		margin: $banner-margin 0;
     color: $light;
-    background: url(../img/haunted-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 
-		@include skew(0,0.5);
+		@include banner(url(../img/haunted-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
 .booth-banner {
-    width: 100%;
 		padding: 50px 0;
-		margin: 50px 0;
+		margin: $banner-margin 0;
     color: $light;
-    background: url(../img/booth-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 
-		@include skew(0,-0.5);
+		@include banner(url(../img/booth-bg.jpg) no-repeat center center scroll,$tilt);
 }
 
 .map-banner {
-    width: 100%;
 		padding: 50px 0;
-		margin: 50px 0;
-    color: $light;
-    background: url(../img/map-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+		margin: $banner-margin 0;
+
+		@include banner(url(../img/map-bg.jpg) no-repeat center center scroll,0);
 }
 
 .location-banner {
-    width: 100%;
 		padding: 50px 0;
-		margin: 50px 0;
+		margin: $banner-margin 0;
     color: $light;
-    background: url(../img/location-bg.jpg) no-repeat center center scroll;
-    background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 
-		@include skew(0,0.5);
+		@include banner(url(../img/location-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
 
@@ -581,6 +562,7 @@ svg {
 	border-radius: 5px;
 	background-color: $dark;
 	color: $light;
+	
 }
 .booth-info-close {
 	width: 22px;
