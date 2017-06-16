@@ -84,7 +84,7 @@
 
 @font-face {
     font-family: "Bebas Neue";
-    src: url("fonts/BebasNeue.otf") format("opentype");
+    src: url("../fonts/BebasNeue.otf") format("opentype");
 }
 
 $main-font: "Bebas Neue", sans-serif;
@@ -122,6 +122,7 @@ body {
     font-family: $secondary-font;
     color: $light;
     background-color: $dark;
+
 }
 
 html {
@@ -258,7 +259,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: linear-gradient(0deg, $dark, transparent, $dark), url(../img/Buildings.jpg) no-repeat bottom center scroll;
+    background: linear-gradient(0deg, $dark, transparent, $dark), url(../img/landing-bg.jpg) no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -293,23 +294,105 @@ a {
 		padding-top: 0px;
 }
 
+/*
 .booth-section {
 		width: 100%;
 		height: 100%;
 		padding-top: 100px;
 }
+*/
 
-.download-section {
+.booth-section {
+    width: 100%;
+    padding: 0px;
+}
+
+.about-banner {
+	width: 100%;
+	padding: 50px 0;
+	margin: 50px 0;
+	color: $light;
+	background: url(../img/haunted-bg.jpg) no-repeat center center scroll;
+	background-color: $dark;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+
+	@include skew(0,-0.5);
+}
+
+.futsal-banner {
     width: 100%;
     padding: 50px 0;
+		margin: 50px 0;
     color: $light;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/futsal-bg.jpg) no-repeat center center scroll;
     background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
+.haunted-banner {
+    width: 100%;
+		padding: 50px 0;
+		margin: 50px 0;
+    color: $light;
+    background: url(../img/haunted-bg.jpg) no-repeat center center scroll;
+    background-color: $dark;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+		@include skew(0,0.5);
+}
+
+.booth-banner {
+    width: 100%;
+		padding: 50px 0;
+		margin: 50px 0;
+    color: $light;
+    background: url(../img/booth-bg.jpg) no-repeat center center scroll;
+    background-color: $dark;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+		@include skew(0,-0.5);
+}
+
+.map-banner {
+    width: 100%;
+		padding: 50px 0;
+		margin: 50px 0;
+    color: $light;
+    background: url(../img/map-bg.jpg) no-repeat center center scroll;
+    background-color: $dark;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.location-banner {
+    width: 100%;
+		padding: 50px 0;
+		margin: 50px 0;
+    color: $light;
+    background: url(../img/location-bg.jpg) no-repeat center center scroll;
+    background-color: $dark;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
+		@include skew(0,0.5);
+}
+
 
 @media(min-width:767px) {
     .content-section {
@@ -440,6 +523,7 @@ body {
 #map {
 	padding: 10px 100px;
 	margin: 0px;
+	margin-bottom: 100px;
 	height: 90%;
 	width: 100%;
 	overflow: hidden;
@@ -544,9 +628,13 @@ svg {
 .booth-deposit-row {
 	margin: 0px;
 	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 0px;
 }
 
 .booth-image {
 	border: 2px $light solid;
+}
+
+.to-be-announced {
+	opacity: 0.5;
 }
