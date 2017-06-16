@@ -453,6 +453,7 @@ svg {
 	width: 100%;
 	height: 100%;
 	display: block;
+	@include transition(opacity .5s ease);
 }
 
 .spinner {
@@ -483,4 +484,69 @@ svg {
     transform: scale(1.0);
     opacity: 0;
   }
+}
+
+.booth-info {
+	width: auto;
+	height: auto;
+	padding: 30px;
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	border: solid 2px $des-color-alt-dark;
+	border-radius: 5px;
+	background-color: $dark;
+	color: $light;
+}
+.booth-info-close {
+	width: 22px;
+	height: 24px;
+	padding: 5px;
+	font-size: 1em;
+	line-height: 0.9333333333em;
+	background-color: transparent;
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	text-decoration: none;
+	display: block;
+	border: none;
+}
+
+.booth-tag {
+	margin-bottom: 0px;
+}
+
+.mobile-only {display: none;}
+.mobile-hide {display: inline;}
+
+@media(max-width:768px) {
+    .mobile-only {display: inline;}
+    .mobile-hide {display: none;}
+}
+
+@media(min-width:768px) {
+
+	.left-right-bars {
+		border: none;
+		border-left: solid $light 5px;
+		border-right: solid $light 5px;
+	}
+
+}
+
+.booth-pricing-row {
+	margin: 0px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.booth-deposit-row {
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+
+.booth-image {
+	border: 2px $light solid;
 }
