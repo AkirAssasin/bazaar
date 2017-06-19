@@ -32,22 +32,30 @@ var premiumPrice = "RM10";
 var $map = $('#map');
 var $infobox = $('.booth-info');
 
+var easing = "cubic-bezier(0.215, 0.61, 0.355, 1)";
+var planMilliseconds = 3000;
+var planAnimation = Raphael.animation({"opacity":"1"},planMilliseconds,easing,function(e){});
+
+var boothMilliseconds = 1000;
+var randomMilliseconds = 1000;
+var boothAnimation = Raphael.animation({"opacity":"1"},boothMilliseconds,easing,function(e){});
+
 function drawSVGPaths (data, tabletop) {
 
   //var floorPlan = map.path("M240 10L240 130L230 140L190 140L180 130L180 100L160 80L160 50L150 40L50 40L40 50L40 60L30 70L10 70L0 80L0 190L10 200L300 200L310 190L310 80L320 70L330 70L340 60L340 10L330 0L250 0L240 10Z");
   var floorPlan = map.path("M240 110L240 240L220 240L210 250L205.77 245.77L200 240L190 240L180 230L180 200L170 190L160 190L160 150L150 140L50 140L40 150L40 170L10 170L0 180L0 280L10 290L210 290L220 300L350 300L360 290L360 270L350 260L310 260L310 180L320 170L330 170L340 160L340 110L330 100L250 100L240 110Z");
-  floorPlan.attr({"fill":floorFill,"stroke":floorOutline,"type":"path"});
+  floorPlan.attr({"fill":floorFill,"opacity":"0","stroke":floorOutline,"type":"path"});
+  floorPlan.animate(planAnimation);
 
   var outdoorPlan = map.path("M350 100L360 90L370 90L370 10L380 0L580 0L590 10L590 150L580 160L560 160L550 170L360 170L350 160L350 100Z");
-  outdoorPlan.attr({"fill":fieldFill,"opacity":"0.5","stroke":fieldOutline,"type":"path"});
+  outdoorPlan.attr({"fill":fieldFill,"opacity":"0","stroke":fieldOutline,"type":"path"});
+  outdoorPlan.animate(planAnimation);
 
 
   for (var i = 0; i < data.length; i++) {
 
-
-
     var booth = map.path(boothPath);
-    booth.attr({"type":"path","stroke":"none"});
+    booth.attr({"type":"path","stroke":"none","opacity":"0"});
 
     if (data[i].Booked == 'N') {
       booth.attr({"stroke":freeOutline});
@@ -65,6 +73,10 @@ function drawSVGPaths (data, tabletop) {
       "boothType":data[i].Type,"boothVendorName":data[i].VendorName,"boothVendorImage":data[i].VendorImageUrl,
       "boothVendorSite":data[i].VendorSite,"boothVendorDesc":data[i].VendorDescription});
 
+      var delay = planMilliseconds - (Math.random() * randomMilliseconds);
+      console.log(delay);
+    booth.animate(boothAnimation.delay(delay));
+
     /*
     booth.hover(function(e){
       this.node.style.opacity = 1;
@@ -72,7 +84,7 @@ function drawSVGPaths (data, tabletop) {
       this.node.style.opacity = 0.8;
     });*/
 
-    /*
+
     booth.mousedown(function(e) {
 
       var posx;
@@ -91,7 +103,7 @@ function drawSVGPaths (data, tabletop) {
             $infobox.find('.booth-desc').text("");
 
             $infobox.find('.booth-image').attr("src", "");
-            $infobox.find('.booth-image').addClass("hide");
+            $infobox.find('.booth-image').addClass("hidden");
 
             $infobox.find('.booth-site').attr("href", "#");
             $infobox.find('.booth-site').text("");
@@ -108,7 +120,7 @@ function drawSVGPaths (data, tabletop) {
             $infobox.find('.booth-desc').text(this.data("boothVendorDesc"));
 
             $infobox.find('.booth-image').attr("src", this.data("boothVendorImage"));
-            $infobox.find('.booth-image').removeClass("hide");
+            $infobox.find('.booth-image').removeClass("hidden");
 
             $infobox.find('.booth-site').attr("href", this.data("boothVendorSite"));
             $infobox.find('.booth-site').text(this.data("boothVendorSite"));
@@ -146,7 +158,7 @@ function drawSVGPaths (data, tabletop) {
           //}
 
         }
-      });*/
+      });
 
       $infobox.on('click', '.booth-info-close', function(e){
 
@@ -161,15 +173,17 @@ function drawSVGPaths (data, tabletop) {
 
   }
 
-  $(".spinner").each (function (index) {
-    $(this).addClass("hide");
+  $(".hide-after-load").each (function (index) {
+    $(this).addClass("hidden");
+  });
+
+  $(".hide-before-load").each (function (index) {
+    $(this).removeClass("hide-before-load");
   });
 
   var svg = document.querySelector("svg");
   svg.removeAttribute("width");
   svg.removeAttribute("height");
-
-  $map.removeClass("hide");
 
 }
 

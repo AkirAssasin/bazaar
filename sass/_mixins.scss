@@ -39,3 +39,16 @@
 	-webkit-transform-origin: $origin;
           transform-origin: $origin;
 }
+
+@mixin banner ($background, $y) {
+width: 100%;
+	background: $background;
+ background-color: $des-color-alt-darker;
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+ -o-background-size: cover;
+ //background-attachment: fixed;
+ @include skew(0,$y);
+
+}

@@ -31,8 +31,3 @@ $(function() {
 $('.navbar-collapse ul li a').click(function() {
     $(".navbar-collapse").collapse('hide');
 });
-
-$('.carousel').carousel({
-  interval: 3000,
-  pause: "false"
-});

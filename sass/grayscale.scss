@@ -1,121 +1,6 @@
 @import "variables";
 @import "mixins";
 
-@function is-cool-color($color) {
-	@return hue($color) < 300 and hue($color) > 120;
-}
-
-@function is-high-key-value($color) {
-	@return hue($color) > 30 and hue($color) < 140;
-}
-
-@function harmonious-mix($mix, $base) {
-	@if (is-cool-color($mix)){
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 11%);
-		}
-		@else {
-			@return mix($mix, $base, 16%);
-		}
-	}
-	@else {
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 13%);
-		}
-		@else {
-			@return mix($mix, $base, 23%);
-		}
-	}
-}
-
-@function mix-neutral($color) {
-	@if (is-highest-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 19%);
-		}
-		@else {
-			@return mix(complement($color), $color, 13%);
-		}
-	}
-	@else if (is-high-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
-	@else {
-		@if is-highest-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 26%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
-}
-
-@function pick-contrast($color) {
-	@if is-high-key-value($color){
-		@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return darken(complement($color), 53);
-		}
-  } @else {
-	@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return lighten(complement($color), 53);
-		}
-	}
-}
-
-@font-face {
-    font-family: "Bebas Neue";
-    src: url("../fonts/BebasNeue.otf") format("opentype");
-}
-
-$main-font: "Bebas Neue", sans-serif;
-//$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$secondary-font: "Advent Pro", sans-serif;
-
-$base-color: hsl(45, 100%, 50%);
-$base-color-alt: hsl(200, 100%, 50%);
-
-/*
-$color: $base-color;
-$color-alt: $base-color-alt;
-*/
-
-$color: harmonious-mix($base-color-alt, $base-color); // used for links
-$color-alt: harmonious-mix($base-color, $base-color-alt);
-
-$des-color: mix-neutral($color); // ??? can be used for nav-bar
-$des-color-alt: mix-neutral($color-alt); // ??? can be used as background
-
-$des-color-dark: darken($des-color,25%); // ??? currently used for nav-bar
-$des-color-light: lighten($des-color,25%); // used for link hover and focus
-
-$des-color-alt-dark: darken($des-color-alt,25%); // used for text-div backgrounds
-$des-color-alt-light: lighten($des-color-alt,25%); // ???
-
-$des-color-alt-darker: darken($des-color-alt,42%); // used for text-div backgrounds
-
-$dark: darken($des-color-alt,44%); // ???
-$light: lighten($des-color,45%); // used for plain text
-
 body {
     width: 100%;
     height: 100%;
@@ -129,6 +14,8 @@ html {
     width: 100%;
     height: 100%;
 }
+
+// ====================================================== T E X T ====================================================== //
 
 h1,
 h2,
@@ -172,17 +59,71 @@ a {
 		font-size: 90%;
 		text-align: center center;
 }
+
 .boost-size {
 		font-size: 200%;
 }
 
+.to-be-announced {
+	opacity: 0.5;
+}
+
+// ====================================================== B U T T O N S ====================================================== //
+
+.btn {
+    text-transform: uppercase;
+    font-family: $secondary-font;
+		font-size: 30px;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    border-radius: 0;
+}
+
+.btn-secondary {
+	border: 0px;
+	outline: none;
+	color: $dark;
+	background-color: $color;
+	opacity: 0.8;
+    &:hover,
+    &:focus {
+        opacity: 1;
+				background-color: $color;
+    }
+}
+
+ul.banner-social-buttons {
+    margin-top: 0;
+    @media(max-width:1199px) {
+        margin-top: 15px;
+    }
+    @media(max-width:767px) {
+        li {
+            display: block;
+            margin-bottom: 20px;
+            padding: 0;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// ====================================================== N A V B A R ====================================================== //
+
 .navbar-custom {
-		display: none;
+		//display: none;
 		margin-bottom: 0;
+		margin-top: -10px;
+		padding: 0 10px;
     border: none;
     text-transform: uppercase;
     font-family: $main-font;
-    background-color: transparent;
+    background-color: $dark;
+
+		@include skew(0,1);
 
     .navbar-toggler {
         font-size: 30px;
@@ -252,6 +193,8 @@ a {
     }
 }
 
+// ====================================================== I N T R O ====================================================== //
+
 .intro {
     display: table;
     width: 100%;
@@ -288,44 +231,14 @@ a {
             }
         }
     }
-
-		//@include skew(0,1);
 }
 
-.content-section {
-    padding-bottom: 100px;
-		padding-top: 0px;
-}
-
-/*
-.booth-section {
-		width: 100%;
-		height: 100%;
-		padding-top: 100px;
-}
-*/
-
-.booth-section {
-    width: 100%;
-    padding: 0px;
-}
-
-@mixin banner ($background, $y) {
-width: 100%;
-	background: $background;
- background-color: $des-color-alt-darker;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- background-size: cover;
- -o-background-size: cover;
- @include skew(0,$y);
-
-}
+// ====================================================== B A N N E R S ====================================================== //
 
 $tilt: 1;
-$empty-banner-padding: 50px;
-$empty-banner-fit: 100px;
-$banner-margin: 50px;
+$banner-margin: 100px;
+
+// ====================================================== A B O U T ====================================================== //
 
 .about-banner {
 	padding: 50px 0;
@@ -335,6 +248,8 @@ $banner-margin: 50px;
 	@include banner(url(../img/about-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
+// ====================================================== F U T S A L ====================================================== //
+
 .futsal-banner {
     padding: 50px 0;
 		margin: $banner-margin 0;
@@ -342,6 +257,8 @@ $banner-margin: 50px;
 
 		@include banner(url(../img/futsal-bg.jpg) no-repeat center center scroll,$tilt);
 }
+
+// ====================================================== H A U N T E D ====================================================== //
 
 .haunted-banner {
 		padding: 50px 0;
@@ -351,6 +268,8 @@ $banner-margin: 50px;
 		@include banner(url(../img/haunted-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
+// ====================================================== B O O T H S ====================================================== //
+
 .booth-banner {
 		padding: 50px 0;
 		margin: $banner-margin 0;
@@ -359,12 +278,29 @@ $banner-margin: 50px;
 		@include banner(url(../img/booth-bg.jpg) no-repeat center center scroll,$tilt);
 }
 
-.map-banner {
-		padding: 50px 0;
-		margin: $banner-margin 0;
+@media(min-width:768px) {
 
-		@include banner(url(../img/map-bg.jpg) no-repeat center center scroll,0);
+	.left-right-bars {
+		border: none;
+		border-left: solid $light 5px;
+		border-right: solid $light 5px;
+	}
+
 }
+
+.booth-pricing-row {
+	margin: 0px;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+.booth-deposit-row {
+	margin: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+// ====================================================== L O C A T I O N ====================================================== //
 
 .location-banner {
 		padding: 50px 0;
@@ -374,62 +310,14 @@ $banner-margin: 50px;
 		@include banner(url(../img/location-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
-
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-
     #map {
         height: 400px;
         margin-top: 250px;
     }
 }
 
-.btn {
-    text-transform: uppercase;
-    font-family: $secondary-font;
-		font-size: 30px;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    border-radius: 0;
-}
-
-.btn-secondary {
-    border: 1px solid $color;
-    color: $color;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-        border: 1px solid $color;
-        outline: none;
-        color: $dark;
-        background-color: $color;
-    }
-}
-
-ul.banner-social-buttons {
-    margin-top: 0;
-    @media(max-width:1199px) {
-        margin-top: 15px;
-    }
-    @media(max-width:767px) {
-        li {
-            display: block;
-            margin-bottom: 20px;
-            padding: 0;
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-}
+// ====================================================== F O O T E R ====================================================== //
 
 footer {
     padding: 50px 0;
@@ -437,6 +325,8 @@ footer {
         margin: 0;
     }
 }
+
+// ====================================================== S E L E C T I O N ====================================================== //
 
 ::-moz-selection {
     text-shadow: none;
@@ -461,6 +351,8 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: rgba(white, 0.2);
 }
+
+// ====================================================== P A L E T T E ====================================================== //
 
 .color {
 	color: $color;
@@ -501,16 +393,31 @@ body {
 	color: $light;
 }
 
+// ====================================================== M A P ====================================================== //
+
+.map-banner {
+		display: block;
+		padding: 0px;
+		margin: 0px;
+		width: 100%;
+		height: 100%;
+		background: $dark;
+}
+
 #map {
 	padding: 10px 100px;
 	margin: 0px;
 	margin-bottom: 100px;
-	height: 90%;
+	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
 
-.hide {
+.hidden {
+	display: none;
+}
+
+.hide-before-load {
 	display: none;
 }
 
@@ -522,14 +429,63 @@ svg {
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
   margin: 100px auto;
-  background-color: #333;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
 
-  border-radius: 100%;
-  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-  animation: sk-scaleout 1.0s infinite ease-in-out;
+$spinner-length: 10;
+$spinner-inbetween-interval: 0.1s;
+$spinner-cycle: 1.2s;
+
+.spinner-container {
+	height: 100%;
+	width: 100%;
+	//margin-left: -($spinner-length/2)*6px;
+}
+
+.spinner-container:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.spinner > div {
+  background-color: $light;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+	vertical-align: middle;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+@for $i from 2 through $spinner-length {
+
+	.spinner .rect-#{$i} {
+		-webkit-animation-delay: -$spinner-cycle + ($spinner-inbetween-interval*($i - 1));
+		animation-delay: -$spinner-cycle + ($spinner-inbetween-interval*($i - 1));
+	}
+
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }
 
 @-webkit-keyframes sk-scaleout {
@@ -551,6 +507,11 @@ svg {
   }
 }
 
+.booth-image {
+	border: 2px $light solid;
+}
+
+
 .booth-info {
 	width: auto;
 	height: auto;
@@ -562,7 +523,7 @@ svg {
 	border-radius: 5px;
 	background-color: $dark;
 	color: $light;
-	
+	transition: top 0.5s ease-in-out, left 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .booth-info-close {
 	width: 22px;
@@ -583,40 +544,12 @@ svg {
 	margin-bottom: 0px;
 }
 
+// ====================================================== R E S P O N D ====================================================== //
+
 .mobile-only {display: none;}
 .mobile-hide {display: inline;}
 
 @media(max-width:768px) {
     .mobile-only {display: inline;}
     .mobile-hide {display: none;}
-}
-
-@media(min-width:768px) {
-
-	.left-right-bars {
-		border: none;
-		border-left: solid $light 5px;
-		border-right: solid $light 5px;
-	}
-
-}
-
-.booth-pricing-row {
-	margin: 0px;
-	margin-top: 50px;
-	margin-bottom: 10px;
-}
-
-.booth-deposit-row {
-	margin: 0px;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
-.booth-image {
-	border: 2px $light solid;
-}
-
-.to-be-announced {
-	opacity: 0.5;
 }

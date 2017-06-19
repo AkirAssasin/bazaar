@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DE BAZAAR</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="stylesheets/grayscale.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".fixed-top">
+
+    <nav class="navbar navbar-custom fixed-top navbar-toggleable-sm" role="navigation">
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+
+            <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-group"></i> <span class="light">DE</span> BAZAAR</a>
+
+          <div class="nav navbar-nav">
+
+            <a class="hidden nav-item nav-link active" href="#page-top"></a>
+
+            <a class="page-scroll nav-item nav-link" href="#about">About</a>
+
+            <a class="page-scroll nav-item nav-link" href="#booths">Booths</a>
+
+            <a class="page-scroll nav-item nav-link" href="#location">Location</a>
+          </div>
+
+        </div>
+    </nav>
+
+    <div class="map-banner text-center">
+      <div class="row mobile-hide">
+          <div class="booth-section">
+
+               <h2><span class="light">Booth</span> Map</h2>
+
+               <div class="spinner-container hide-after-load">
+                  <div class="spinner">
+                    <div class="rect-1"></div>
+                    <div class="rect-2"></div>
+                    <div class="rect-3"></div>
+                    <div class="rect-4"></div>
+                    <div class="rect-5"></div>
+                 </div>
+               </div>
+               <div id="map" class="hide-before-load">
+                 <!-- Raphaël JS Map Here -->
+               </div>
+               <div class="booth-info">
+                 <p>Booth <span class="booth-number"></span></p>
+                 <p><span class="booth-name"></span></p>
+                 <p><img class="booth-image" src=""></p>
+                 <p><span class="booth-desc"></span></p>
+                 <p><a class="booth-site" href="#"></a></p>
+                 <span class="booth-tag"></span>
+                 <a href="#" class="booth-info-close"><i class="fa fa-close"></i></a>
+               </div>
+              <p class="hide-before-load">Booths will be available soon!</p>
+          </div>
+      </div>
+      <div class="row mobile-only">
+          <div class="booth-section">
+               <h2><span class="light">Explore</span> Booths <span class="light">on Desktop</span></h2>
+          </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="description"><span class="light">modified version of</span> <a href="http://startbootstrap.com/template-overviews/grayscale/" target="_blank">grayscale</a>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- JavaScripts -->
+    <script src="js/grayscale.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+    <script src="js/map.js"></script>
+
+
+<script type='text/javascript'>
+
+</script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97398334-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+
+</html>
