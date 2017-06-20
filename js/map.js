@@ -26,8 +26,8 @@ var freeOutline = "#081214";
 var normalFill = "#9CB0BD";
 var premiumFill = "#DADBDE";
 
-var normalPrice = "RM1";
-var premiumPrice = "RM10";
+var normalPrice = "RM80, RM65 for ACE-Ed";
+var premiumPrice = "RM105, RM90 for ACE-Ed";
 
 var $map = $('#map');
 var $infobox = $('.booth-info');
@@ -39,6 +39,8 @@ var planAnimation = Raphael.animation({"opacity":"1"},planMilliseconds,easing,fu
 var boothMilliseconds = 1000;
 var randomMilliseconds = 1000;
 var boothAnimation = Raphael.animation({"opacity":"1"},boothMilliseconds,easing,function(e){});
+
+var infoboxIsClosed = true;
 
 function drawSVGPaths (data, tabletop) {
 
@@ -99,20 +101,21 @@ function drawSVGPaths (data, tabletop) {
 
           if (this.data("boothState") == 'N') {
 
-            $infobox.find('.booth-name').text("");
-            $infobox.find('.booth-desc').text("");
+            if (this.data("boothType") == 'Premium') {
+              $infobox.find('.booth-name').text(premiumPrice);
+            } else {
+              $infobox.find('.booth-name').text(normalPrice);
+            }
+
+            $infobox.find('.booth-desc').text("Email us to book this booth!");
 
             $infobox.find('.booth-image').attr("src", "");
             $infobox.find('.booth-image').addClass("hidden");
 
             $infobox.find('.booth-site').attr("href", "#");
-            $infobox.find('.booth-site').text("");
+            $infobox.find('.booth-site').text("info.dbazaar@gmail.com");
 
-            if (this.data("boothType") == 'Premium') {
-              $infobox.find('.booth-tag').text(premiumPrice);
-            } else {
-              $infobox.find('.booth-tag').text(normalPrice);
-            }
+            $infobox.find('.booth-tag').text(this.data("boothType"));
 
           } else {
 
@@ -129,10 +132,16 @@ function drawSVGPaths (data, tabletop) {
 
           }
 
+          if (!infoboxIsClosed) {
+            $infobox.css({'transition' : 'all 0.5s ease-in-out'});
+          }
+
+          infoboxIsClosed = false;
+
           if (posx < $(window).width()/2) {
-            $infobox.css({'left': posx + 'px'});
+            $infobox.css({'left': posx + 'px','max-width': ($(window).width() - posx) + 'px'});
           } else {
-            $infobox.css({'left': (posx - $infobox.width() - 55) + 'px'});
+            $infobox.css({'left': (posx - $infobox.width() - 55) + 'px','max-width': posx + 'px'});
           }
 
           //$infobox.css({'top': ($map.offset().top + $map.height()/2  - $infobox.height()/2) + 'px'});
@@ -164,8 +173,11 @@ function drawSVGPaths (data, tabletop) {
 
       	$infobox.css({
       		'top' : '-99999px',
-      		'left' : '-99999px'
+      		'left' : '-99999px',
+          'transition' : 'none'
       	});
+
+        infoboxIsClosed = true;
 
       	e.preventDefault();
       	e.stopPropagation();
