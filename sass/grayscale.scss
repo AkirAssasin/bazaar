@@ -61,7 +61,8 @@ a {
 }
 
 .boost-size {
-		font-size: 200%;
+		font-size: 110%;
+    font-weight: 150%;
 }
 
 .to-be-announced {
@@ -202,8 +203,8 @@ ul.banner-social-buttons {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
-		background-color: $des-color-alt-darker;
+    //background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
+		background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -235,25 +236,30 @@ ul.banner-social-buttons {
 
 // ====================================================== B A N N E R S ====================================================== //
 
-$tilt: 1;
-$banner-margin: 100px;
+$tilt: 0.8;
+$banner-margin: 100px auto;
+$banner-width: 90%;
 
 // ====================================================== A B O U T ====================================================== //
 
 .about-banner {
 	padding: 50px 0;
-	margin: $banner-margin 0;
+	margin: $banner-margin;
 	color: $light;
 
-	@include banner(url(../img/about-bg.jpg) no-repeat center center scroll,-$tilt);
+  width: $banner-width;
+
+	@include banner(url(../img/landing-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
 // ====================================================== F U T S A L ====================================================== //
 
 .futsal-banner {
     padding: 50px 0;
-		margin: $banner-margin 0;
+		margin: $banner-margin;
     color: $light;
+
+    width: $banner-width;
 
 		@include banner(url(../img/futsal-bg.jpg) no-repeat center center scroll,$tilt);
 }
@@ -262,8 +268,10 @@ $banner-margin: 100px;
 
 .haunted-banner {
 		padding: 50px 0;
-		margin: $banner-margin 0;
+		margin: $banner-margin;
     color: $light;
+
+    width: $banner-width;
 
 		@include banner(url(../img/haunted-bg.jpg) no-repeat center center scroll,-$tilt);
 }
@@ -272,8 +280,10 @@ $banner-margin: 100px;
 
 .booth-banner {
 		padding: 50px 0;
-		margin: $banner-margin 0;
+		margin: $banner-margin;
     color: $light;
+
+    width: $banner-width;
 
 		@include banner(url(../img/booth-bg.jpg) no-repeat center center scroll,$tilt);
 }
@@ -304,8 +314,10 @@ $banner-margin: 100px;
 
 .location-banner {
 		padding: 50px 0;
-		margin: $banner-margin 0;
+		margin: $banner-margin;
     color: $light;
+
+    width: $banner-width;
 
 		@include banner(url(../img/location-bg.jpg) no-repeat center center scroll,-$tilt);
 }

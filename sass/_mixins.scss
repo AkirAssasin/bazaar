@@ -41,8 +41,8 @@
 }
 
 @mixin banner ($background, $y) {
-width: 100%;
 	background: $background;
+  border: solid $light 5px;
  background-color: $des-color-alt-darker;
  -webkit-background-size: cover;
  -moz-background-size: cover;
