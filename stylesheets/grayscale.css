@@ -749,13 +749,13 @@ svg {
 
 /* line 595, ../sass/grayscale.scss */
 .mobile-hide {
-  display: inline;
+  display: inherit;
 }
 
 @media (max-width: 768px) {
   /* line 598, ../sass/grayscale.scss */
   .mobile-only {
-    display: inline;
+    display: inherit;
   }
 
   /* line 599, ../sass/grayscale.scss */
