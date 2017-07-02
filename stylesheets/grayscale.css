@@ -742,24 +742,15 @@ svg {
   line-height: -5;
 }
 
-/* line 594, ../sass/grayscale.scss */
-.mobile-only {
-  display: none;
-}
-
-/* line 595, ../sass/grayscale.scss */
-.mobile-hide {
-  display: inherit;
-}
-
 @media (max-width: 768px) {
-  /* line 598, ../sass/grayscale.scss */
-  .mobile-only {
-    display: inherit;
-  }
-
-  /* line 599, ../sass/grayscale.scss */
+  /* line 595, ../sass/grayscale.scss */
   .mobile-hide {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  /* line 599, ../sass/grayscale.scss */
+  .mobile-only {
     display: none;
   }
 }

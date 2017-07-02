@@ -591,10 +591,10 @@ $spinner-cycle: 1.2s;
 
 // ====================================================== R E S P O N D ====================================================== //
 
-.mobile-only {display: none;}
-.mobile-hide {display: inherit;}
-
 @media(max-width:768px) {
-    .mobile-only {display: inherit;}
     .mobile-hide {display: none;}
+}
+
+@media(min-width:769px) {
+    .mobile-only {display: none;}
 }
