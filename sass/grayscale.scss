@@ -237,8 +237,13 @@ ul.banner-social-buttons {
 // ====================================================== B A N N E R S ====================================================== //
 
 $tilt: 0.8;
-$banner-margin: 100px auto;
-$banner-width: 90%;
+$banner-margin: 0px auto;
+$banner-width: 100%;
+
+.content-row {
+  width: 90%;
+  margin: 100px auto;
+}
 
 // ====================================================== A B O U T ====================================================== //
 
@@ -247,7 +252,7 @@ $banner-width: 90%;
 	margin: $banner-margin;
 	color: $light;
 
-  width: $banner-width;
+  width: 90%;
 
 	@include banner(url(../img/landing-bg.jpg) no-repeat center center scroll,-$tilt);
 }
@@ -255,7 +260,7 @@ $banner-width: 90%;
 // ====================================================== F U T S A L ====================================================== //
 
 .futsal-banner {
-    padding: 50px 0;
+    padding: 50px;
 		margin: $banner-margin;
     color: $light;
 
@@ -264,16 +269,26 @@ $banner-width: 90%;
 		@include banner(url(../img/futsal-bg.jpg) no-repeat center center scroll,$tilt);
 }
 
-// ====================================================== H A U N T E D ====================================================== //
+// ================================================== P L A C E H O L D E R ================================================== //
 
-.haunted-banner {
-		padding: 50px 0;
+.place-banner {
+    padding: 50px;
 		margin: $banner-margin;
     color: $light;
 
     width: $banner-width;
 
-		@include banner(url(../img/haunted-bg.jpg) no-repeat center center scroll,-$tilt);
+		@include banner(no-repeat center center scroll,$tilt);
+}
+
+.place-banner-alt {
+    padding: 50px;
+		margin: $banner-margin;
+    color: $light;
+
+    width: $banner-width;
+
+		@include banner(no-repeat center center scroll,-$tilt);
 }
 
 // ====================================================== B O O T H S ====================================================== //
@@ -290,10 +305,14 @@ $banner-width: 90%;
 
 @media(min-width:768px) {
 
-	.left-right-bars {
+	.left-bar {
 		border: none;
-		border-left: solid $light 5px;
-		border-right: solid $light 5px;
+		border-left: solid $light 2.5px;
+	}
+
+  .right-bar {
+		border: none;
+		border-right: solid $light 2.5px;
 	}
 
 }
