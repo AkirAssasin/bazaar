@@ -1,4 +1,23 @@
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeue.otf") format("opentype");
+}
+
+$main-font: "Bebas Neue", sans-serif;
+//$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$secondary-font: "Advent Pro", sans-serif;
+$secondary-font: "Armata", sans-serif;
+
+$base-color: hsl(45, 100%, 50%);
+$base-color-alt: hsl(200, 100%, 50%);
+
+/*
+$color: $base-color;
+$color-alt: $base-color-alt;
+*/
+
+
 @function is-cool-color($color) {
 	@return hue($color) < 300 and hue($color) > 120;
 }
@@ -79,23 +98,6 @@
 		}
 	}
 }
-
-@font-face {
-    font-family: "Bebas Neue";
-    src: url("../fonts/BebasNeue.otf") format("opentype");
-}
-
-$main-font: "Bebas Neue", sans-serif;
-//$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$secondary-font: "Advent Pro", sans-serif;
-
-$base-color: hsl(45, 100%, 50%);
-$base-color-alt: hsl(200, 100%, 50%);
-
-/*
-$color: $base-color;
-$color-alt: $base-color-alt;
-*/
 
 $color: harmonious-mix($base-color-alt, $base-color); // used for links
 $color-alt: harmonious-mix($base-color, $base-color-alt);

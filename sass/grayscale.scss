@@ -6,6 +6,8 @@ body {
     height: 100%;
     font-family: $secondary-font;
     color: $light;
+    background: url(../img/body-bg.png) repeat;
+    background-repeat: repeat;
     background-color: $dark;
 
 }
@@ -28,15 +30,16 @@ h6 {
     font-family: $main-font;
     font-weight: 700;
     letter-spacing: 1px;
+    font-size: 40px;
 }
 
 p {
     margin: 0 0 25px;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 1.5;
     @media(min-width:768px) {
         margin: 0 0 35px;
-        font-size: 25px;
+        font-size: 22px;
         line-height: 1.6;
     }
 }
@@ -56,7 +59,7 @@ a {
 .light {
     font-weight: 400;
 		font-family: $secondary-font;
-		font-size: 90%;
+		font-size: 70%;
 		text-align: center center;
 }
 
@@ -204,11 +207,7 @@ ul.banner-social-buttons {
     text-align: center;
     color: $light;
     //background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
-		background-color: $dark;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+
     .intro-body {
         display: table-cell;
         vertical-align: middle;
@@ -289,6 +288,18 @@ $banner-width: 100%;
     width: $banner-width;
 
 		@include banner(no-repeat center center scroll,-$tilt);
+}
+
+// ================================================== S C A R E ================================================== //
+
+.scare-banner {
+    padding: 50px;
+		margin: $banner-margin;
+    color: $light;
+
+    width: $banner-width;
+
+		@include banner(url(../img/asylum-bg.jpg) no-repeat center center scroll,-$tilt);
 }
 
 // ====================================================== B O O T H S ====================================================== //

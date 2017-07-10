@@ -113,7 +113,7 @@ function drawSVGPaths (data, tabletop) {
             $infobox.find('.booth-image').addClass("hidden");
 
             $infobox.find('.booth-site').attr("href", "#");
-            $infobox.find('.booth-site').text("info.dbazaar@gmail.com");
+            $infobox.find('.booth-site').text("Email us at info.dbazaar (Gmail) to book booths!");
 
             $infobox.find('.booth-tag').text(this.data("boothType"));
 
