@@ -760,14 +760,20 @@ svg {
   line-height: -5;
 }
 
+/* line 603, ../sass/grayscale.scss */
+.booth-section {
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
-  /* line 606, ../sass/grayscale.scss */
+  /* line 611, ../sass/grayscale.scss */
   .mobile-hide {
     display: none;
   }
 }
 @media (min-width: 769px) {
-  /* line 610, ../sass/grayscale.scss */
+  /* line 615, ../sass/grayscale.scss */
   .mobile-only {
     display: none;
   }
