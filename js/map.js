@@ -10,27 +10,24 @@ function init() {
                    simpleSheet: true } )
 }
 
-/*
-var boothPath = "M0 3L1 0L11 0L12 3L11 6L1 6Z";
+var arrowPath = "M 0 2 L 2 0 1 0 1 -2 -1 -2 -1 0 2 0 0 2 Z";
 
-var boothOriginX = 6;
-var boothOriginY = 3;
-*/
-
-var boothRadius = 3;
+var boothRadius = 4.5;
 
 var floorOutline = "#081214";
-var floorFill = "#524E45";
+var floorFill = "#999999";
 
 var boothOutline = "#555555";
 var electricOutline = "#FFFF00";
 
 var bookedFill = "#333333";
-var premiumFill = "#DADBDE";
-var normalFill = "#9CB0BD";
+var premiumFill = "#FF6913";
+var normalFill = "#FF9300";
 
-var normalPrice = "RM80, RM65 for ACE-Ed";
-var premiumPrice = "RM105, RM90 for ACE-Ed";
+var normalPrice = 80;
+var premiumPrice = 105;
+
+var electricityFee = 8;
 
 var $map = $('#map');
 var $infobox = $('.booth-info');
@@ -52,10 +49,16 @@ function drawSVGPaths (data, tabletop) {
   floorPlan.attr({"fill":floorFill,"opacity":"0","stroke":floorOutline,"type":"path"});
   floorPlan.animate(planAnimation);
 
+  var arrow = map.path(arrowPath);
+  arrow.attr({"fill":"#000"})
+
   for (var i = 0; i < data.length; i++) {
 
     var booth = map.circle(data[i].X,data[i].Y,boothRadius);
-    booth.attr({"type":"path","stroke":"none","opacity":"0"});
+
+    booth.attr({"stroke":"none","opacity":"0"});
+
+    var boothPrice = 0;
 
     if (data[i].Booked == 'Y') {
 
@@ -68,18 +71,22 @@ function drawSVGPaths (data, tabletop) {
         booth.attr({"stroke":boothOutline});
       } else {
         booth.attr({"stroke":electricOutline});
+        boothPrice += electricityFee;
       }
 
       if (data[i].Type == 'Premium') {
         booth.attr({"fill":premiumFill});
+        boothPrice += premiumPrice;
       } else {
         booth.attr({"fill":normalFill});
+        boothPrice += normalPrice;
       }
 
     }
 
-    booth.data({"boothID":data[i].ID,"boothState":data[i].Booked,
-      "boothType":data[i].Type,"boothElectricity":data[i].Electricity});
+    var boothPrice = "RM" + boothPrice;
+
+    booth.data({"boothID":data[i].ID,"boothState":data[i].Booked,"boothElectricity":data[i].Electricity,"boothPrice":boothPrice});
 
       var delay = planMilliseconds - (Math.random() * randomMilliseconds);
       //console.log(delay);
@@ -98,35 +105,14 @@ function drawSVGPaths (data, tabletop) {
       var posx;
       var posy;
 
-      if (typeof e !== 'undefined') {
+      if ((typeof e !== 'undefined') && (this.data("boothState") == 'N')) {
 
         posx = e.pageX;
         posy = e.pageY;
 
         $infobox.find('.booth-number').text(this.data("boothID"));
 
-        if (this.data("boothState") == 'N') {
-
-          if (this.data("boothType") == 'Premium') {
-            $infobox.find('.booth-desc').text(premiumPrice);
-          } else {
-            $infobox.find('.booth-desc').text(normalPrice);
-          }
-
-          $infobox.find('.booth-site').removeClass("hidden");
-
-          $infobox.find('.booth-tag').text(this.data("boothType"));
-
-        } else {
-
-          $infobox.find('.booth-desc').text("This booth has been booked by someone else.");
-
-          $infobox.find('.booth-site').addClass("hidden");
-
-          $infobox.find('.booth-tag').text("");
-
-        }
-
+        $infobox.find('.booth-price').text(this.data("boothPrice"));
 
         if (!infoboxIsClosed) {
           $infobox.css({'transition' : 'all 0.5s ease-in-out'});

@@ -42,14 +42,15 @@
 
 @mixin banner ($background, $y) {
 	background: $background;
-  border: solid $light 5px;
- background-color: $des-color-alt-darker;
- -webkit-background-size: cover;
- -moz-background-size: cover;
- background-size: cover;
- -o-background-size: cover;
- //padding: 10px 10px;
- //background-attachment: fixed;
- @include skew(0,$y);
+  border: solid $banner-border-color 5px;
+  color: $paragraph-color;
+  background-color: $banner-background-color;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  //padding: 10px 10px;
+  //background-attachment: fixed;
+  @include skew(0,$y);
 
 }

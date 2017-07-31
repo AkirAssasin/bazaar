@@ -1,117 +1,27 @@
 
 @font-face {
-    font-family: "Bebas Neue";
-    src: url("../fonts/BebasNeue.otf") format("opentype");
+    font-family: "Angeline Vintage";
+    src: url("../fonts/Angeline Vintage.ttf") format("truetype");
 }
 
-$main-font: "Bebas Neue", sans-serif;
+$main-font: "Angeline Vintage", sans-serif;
 //$secondary-font: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$secondary-font: "Advent Pro", sans-serif;
 $secondary-font: "Armata", sans-serif;
 
-$base-color: hsl(45, 100%, 50%);
-$base-color-alt: hsl(200, 100%, 50%);
+$paragraph-color: #000;
 
-/*
-$color: $base-color;
-$color-alt: $base-color-alt;
-*/
+$link-color: #000;
+$link-hover-color: #000;
 
+$banner-background-color: #FF6913;
+$banner-border-color: #9C400B;
 
-@function is-cool-color($color) {
-	@return hue($color) < 300 and hue($color) > 120;
-}
+$div-background-color: #575757;
+$div-border-color: #3c3c3c;
 
-@function is-high-key-value($color) {
-	@return hue($color) > 30 and hue($color) < 140;
-}
+$button-color: #ff0;
+$button-hover-color: #ffa;
 
-@function harmonious-mix($mix, $base) {
-	@if (is-cool-color($mix)){
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 11%);
-		}
-		@else {
-			@return mix($mix, $base, 16%);
-		}
-	}
-	@else {
-		@if is-high-key-value($base) {
-			@return mix($mix, $base, 13%);
-		}
-		@else {
-			@return mix($mix, $base, 23%);
-		}
-	}
-}
-
-@function mix-neutral($color) {
-	@if (is-highest-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 19%);
-		}
-		@else {
-			@return mix(complement($color), $color, 13%);
-		}
-	}
-	@else if (is-high-key-value($color)) {
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
-	@else {
-		@if is-highest-key-value(complement($color)) {
-			@return mix(complement($color), $color, 31%);
-		}
-		@if is-high-key-value(complement($color)) {
-			@return mix(complement($color), $color, 26%);
-		}
-		@else {
-			@return mix(complement($color), $color, 23%);
-		}
-	}
-}
-
-@function pick-contrast($color) {
-	@if is-high-key-value($color){
-		@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return darken(complement($color), 53);
-		}
-  } @else {
-	@if lightness($color) < 30% {
-			@return lighten(complement($color), 86);
-		}
-		@else if lightness($color) > 70% {
-			@return darken(complement($color), 68);
-		}
-		@else {
-			@return lighten(complement($color), 53);
-		}
-	}
-}
-
-$color: harmonious-mix($base-color-alt, $base-color); // used for links
-$color-alt: harmonious-mix($base-color, $base-color-alt);
-
-$des-color: mix-neutral($color); // ??? can be used for nav-bar
-$des-color-alt: mix-neutral($color-alt); // ??? can be used as background
-
-$des-color-dark: darken($des-color,25%); // ??? currently used for nav-bar
-$des-color-light: lighten($des-color,25%); // used for link hover and focus
-
-$des-color-alt-dark: darken($des-color-alt,25%); // used for text-div backgrounds
-$des-color-alt-light: lighten($des-color-alt,25%); // ???
-
-$des-color-alt-darker: darken($des-color-alt,42%); // used for text-div backgrounds
-
-$dark: darken($des-color-alt,44%); // ???
-$light: lighten($des-color,45%); // used for plain text
+$button-text-color: #000;
+$button-text-hover-color: #000;

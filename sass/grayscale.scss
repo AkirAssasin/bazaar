@@ -2,13 +2,13 @@
 @import "mixins";
 
 body {
+
     width: 100%;
     height: 100%;
     font-family: $secondary-font;
-    color: $light;
+    color: $paragraph-color;
     background: url(../img/body-bg.png) repeat;
     background-repeat: repeat;
-    background-color: $dark;
 
 }
 
@@ -45,14 +45,14 @@ p {
 }
 
 a {
-    color: $color;
+    color: $link-color;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     &:hover,
     &:focus {
         text-decoration: none;
-        color: $des-color-light;
+        color: $link-hover-color;
     }
 }
 
@@ -88,13 +88,14 @@ a {
 .btn-secondary {
 	border: 0px;
 	outline: none;
-	color: $dark;
-	background-color: $color;
+	color: $button-text-color;
+	background-color: $button-color;
 	opacity: 0.8;
     &:hover,
     &:focus {
         opacity: 1;
-				background-color: $color;
+        color: $button-text-hover-color;
+				background-color: $button-hover-color;
     }
 }
 
@@ -115,88 +116,6 @@ ul.banner-social-buttons {
     }
 }
 
-// ====================================================== N A V B A R ====================================================== //
-
-.navbar-custom {
-		//display: none;
-		margin-bottom: 0;
-		margin-top: -10px;
-		padding: 0 10px;
-    border: none;
-    text-transform: uppercase;
-    font-family: $main-font;
-    background-color: $dark;
-
-		//@include skew(0,1);
-
-    .navbar-toggler {
-        font-size: 30px;
-				background: $dark;
-				border: 1px solid $light;
-        color: $light;
-        &:focus,
-        &:active {
-            outline: none;
-        }
-    }
-    .navbar-brand {
-        font-weight: 700;
-        &:focus {
-            outline: none;
-        }
-    }
-    a {
-        color: $color;
-				&:hover {
-						color: $des-color-light;
-				}
-    }
-    .nav {
-			font-family: $secondary-font;
-        a {
-          	-webkit-transition: background .3s ease-in-out;
-            -moz-transition: background .3s ease-in-out;
-            transition: background .3s ease-in-out;
-
-            &:hover {
-                color: $des-color-light;
-                outline: none;
-                background-color: transparent;
-            }
-            &:focus,
-            &:active {
-                outline: none;
-                background-color: transparent;
-            }
-        }
-        &.active {
-            outline: none;
-            a {
-                background-color: $des-color-dark;
-            }
-        }
-    }
-
-    @media(min-width:768px) {
-				display: block;
-        padding: 20px 0;
-        border-bottom: none;
-        letter-spacing: 1px;
-        background: transparent;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-        &.top-nav-collapse {
-            padding: 10px 0;
-            background: $dark;
-            border-bottom: 1px solid transparentize($light,0.7);
-        }
-				.navbar-collapse {
-					padding: 0px 50px;
-				}
-    }
-}
-
 // ====================================================== I N T R O ====================================================== //
 
 .intro {
@@ -205,7 +124,7 @@ ul.banner-social-buttons {
     height: 100%;
     padding: 100px 0;
     text-align: center;
-    color: $light;
+    color: $paragraph-color;
     //background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
 
     .intro-body {
@@ -249,23 +168,10 @@ $banner-width: 100%;
 .about-banner {
 	padding: 50px 0;
 	margin: $banner-margin;
-	color: $light;
 
   width: 90%;
 
-	@include banner(url(../img/landing-bg.jpg) no-repeat center center scroll,-$tilt);
-}
-
-// ====================================================== F U T S A L ====================================================== //
-
-.futsal-banner {
-    padding: 50px;
-		margin: $banner-margin;
-    color: $light;
-
-    width: $banner-width;
-
-		@include banner(url(../img/futsal-bg.jpg) no-repeat center center scroll,$tilt);
+	@include banner(no-repeat center center scroll,-$tilt);
 }
 
 // ================================================== P L A C E H O L D E R ================================================== //
@@ -273,7 +179,6 @@ $banner-width: 100%;
 .place-banner {
     padding: 50px;
 		margin: $banner-margin;
-    color: $light;
 
     width: $banner-width;
 
@@ -283,7 +188,6 @@ $banner-width: 100%;
 .place-banner-alt {
     padding: 50px;
 		margin: $banner-margin;
-    color: $light;
 
     width: $banner-width;
 
@@ -295,11 +199,10 @@ $banner-width: 100%;
 .scare-banner {
     padding: 50px;
 		margin: $banner-margin;
-    color: $light;
 
     width: $banner-width;
 
-		@include banner(url(../img/asylum-bg.jpg) no-repeat center center scroll,-$tilt);
+		@include banner(no-repeat center center scroll,-$tilt);
 }
 
 // ====================================================== B O O T H S ====================================================== //
@@ -307,23 +210,22 @@ $banner-width: 100%;
 .booth-banner {
 		padding: 50px 0;
 		margin: $banner-margin;
-    color: $light;
 
     width: $banner-width;
 
-		@include banner(url(../img/booth-bg.jpg) no-repeat center center scroll,$tilt);
+		@include banner(no-repeat center center scroll,$tilt);
 }
 
 @media(min-width:768px) {
 
 	.left-bar {
 		border: none;
-		border-left: solid $light 2.5px;
+		border-left: solid $paragraph-color 2.5px;
 	}
 
   .right-bar {
 		border: none;
-		border-right: solid $light 2.5px;
+		border-right: solid $paragraph-color 2.5px;
 	}
 
 }
@@ -345,11 +247,10 @@ $banner-width: 100%;
 .location-banner {
 		padding: 50px 0;
 		margin: $banner-margin;
-    color: $light;
 
     width: $banner-width;
 
-		@include banner(url(../img/location-bg.jpg) no-repeat center center scroll,-$tilt);
+		@include banner(no-repeat center center scroll,$tilt);
 }
 
 @media(min-width:767px) {
@@ -394,47 +295,6 @@ body {
     -webkit-tap-highlight-color: rgba(white, 0.2);
 }
 
-// ====================================================== P A L E T T E ====================================================== //
-
-.color {
-	color: $color;
-}
-.color-alt {
-	color: $color-alt;
-}
-
-.des-color {
-	color: $des-color;
-}
-.des-color-alt {
-	color: $des-color-alt;
-}
-
-.des-color-dark {
-	color: $des-color-dark;
-}
-.des-color-light {
-	color: $des-color-light;
-}
-
-.des-color-alt-dark {
-	color: $des-color-alt-dark;
-}
-.des-color-alt-light {
-	color: $des-color-alt-light;
-}
-
-.des-color-alt-darker {
-	color: $des-color-alt-darker;
-}
-
-.darker {
-	color: $dark;
-}
-.lighter {
-	color: $light;
-}
-
 // ====================================================== M A P ====================================================== //
 
 .map-banner {
@@ -448,7 +308,7 @@ body {
 	margin: 0px;
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	overflow: visible;
 }
 
 .hidden {
@@ -492,7 +352,7 @@ $spinner-cycle: 1.2s;
 }
 
 .spinner > div {
-  background-color: $light;
+  background-color: $paragraph-color;
   height: 100%;
   width: 6px;
   display: inline-block;
@@ -552,10 +412,15 @@ $spinner-cycle: 1.2s;
 	position: absolute;
 	top: -9999px;
 	left: -9999px;
-	border: solid 2px $des-color-alt-dark;
+	border: solid 2px $div-border-color;
 	border-radius: 5px;
-	background-color: $dark;
-	color: $light;
+	background-color: $div-background-color;
+	color: $paragraph-color;
+
+  p {
+    margin: 0px;
+  }
+
 }
 .booth-info-close {
 	width: 22px;
@@ -572,13 +437,12 @@ $spinner-cycle: 1.2s;
 	border: none;
 }
 
-.booth-tag {
-	margin-bottom: 0px;
+.booth-price {
+  font-size: 50px;
 }
 
-.booth-desc {
-  font-size: 20px;
-  line-height: -5;
+.booth-number {
+  font-size: 30px;
 }
 
 .booth-section {
@@ -587,7 +451,7 @@ $spinner-cycle: 1.2s;
 }
 
 .booth-number {
-  color: $color;
+  color: $paragraph-color;
 }
 
 // ====================================================== R E S P O N D ====================================================== //
