@@ -2,7 +2,7 @@ var map = Raphael('map',490,270);
 
 map.setViewBox(0,0,490,270,true);
 
-var publicSpreadsheetURL = 'https://docs.google.com/spreadsheets/d/1_K2G5oFBR6M5zOgE89kdUHLXUtO2wSwtPRCnJzUyf6A/pubhtml';
+var publicSpreadsheetURL = 'https://docs.google.com/spreadsheets/d/1XnCIlpLgPObMJ07GRdOljArDCaLAlERJg8AMLJgE6jE/pubhtml';
 
 function init() {
   Tabletop.init( { key: publicSpreadsheetURL,
@@ -60,7 +60,7 @@ function drawSVGPaths (data, tabletop) {
 
     var boothPrice = 0;
 
-    if (data[i].Booked == 'Y') {
+    if (data[i].Verified == 'Y') {
 
       booth.attr({"fill":bookedFill});
       booth.attr({"stroke":boothOutline});
@@ -86,7 +86,7 @@ function drawSVGPaths (data, tabletop) {
 
     var boothPrice = "RM" + boothPrice;
 
-    booth.data({"boothID":data[i].ID,"boothState":data[i].Booked,"boothElectricity":data[i].Electricity,"boothPrice":boothPrice});
+    booth.data({"boothID":data[i].ID,"boothState":data[i].Verified,"boothElectricity":data[i].Electricity,"boothPrice":boothPrice});
 
       var delay = planMilliseconds - (Math.random() * randomMilliseconds);
       //console.log(delay);
