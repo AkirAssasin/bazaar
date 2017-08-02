@@ -49,8 +49,17 @@ function drawSVGPaths (data, tabletop) {
   floorPlan.attr({"fill":floorFill,"opacity":"0","stroke":floorOutline,"stroke-width":0,"type":"path"});
   floorPlan.animate(planAnimation);
 
+  var entrance = map.text(335, 10, "Entrance");
+  entrance.attr({"font-family":"Bebas Neue","font-size":19,"opacity":"0"});
+  entrance.animate(planAnimation);
+
+  var ctl = map.image("img/toilet.png", 20, 85, 15, 15);
+  var htl = map.image("img/toilet.png", 465, 250, 15, 15);
+
+  /*
   var arrow = map.path(arrowPath);
   arrow.attr({"fill":"#000"})
+  */
 
   for (var i = 0; i < data.length; i++) {
 
@@ -184,6 +193,22 @@ function drawSVGPaths (data, tabletop) {
   var svg = document.querySelector("svg");
   svg.removeAttribute("width");
   svg.removeAttribute("height");
+
+  var mapos = $("#map").position();
+
+  $(".map-caption").each (function (index) {
+    $(this).css({
+      'top' : mapos.top,
+      'left' : mapos.left
+    });
+  });
+
+  $(".map-caption").each (function (index) {
+    $(this).css({
+      'top' : mapos.top,
+      'left' : mapos.left
+    });
+  });
 
 }
 

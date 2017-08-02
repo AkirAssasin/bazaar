@@ -186,71 +186,46 @@ ul.banner-social-buttons {
     }
 }
 
-
-// ====================================================== I N T R O ====================================================== //
-
-.intro {
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0px;
-    margin-top: 100px;
-    text-align: center;
-    color: $paragraph-color;
-    //background: url(../img/landing-bg.jpg) no-repeat bottom center scroll;
-
-    .intro-body {
-        display: block;
-        vertical-align: middle;
-				//background: linear-gradient(0deg, $dark, transparent, $dark);
-        .brand-heading {
-            font-size: 50px;
-        }
-        .intro-text {
-            font-size: 20px;
-        }
-    }
-    @media(min-width:768px) {
-        height: auto;
-        padding: 0;
-        .intro-body {
-            .brand-heading {
-                font-size: 120px;
-            }
-            .intro-text {
-                font-size: 26px;
-            }
-        }
-    }
-}
-
 // ====================================================== B A N N E R S ====================================================== //
-
-$tilt: 0.8;
-$banner-margin: 0px auto;
-$banner-width: 100%;
 
 .content-row {
   width: 90%;
   margin: 100px auto;
 }
 
-// ====================================================== L O C A T I O N ====================================================== //
-
-.location-banner {
-		padding: 50px 0;
-		margin: $banner-margin;
-
-    width: $banner-width;
-
-		@include banner(no-repeat center center scroll,$tilt);
+.text-center {
+  //border: 1px solid black;
 }
 
-@media(min-width:767px) {
-    #map {
-        height: 400px;
-        margin-top: 250px;
-    }
+.description {
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+.map-caption {
+  margin: 20px 100px;
+  position: absolute;
+  text-align: left;
+
+  p {
+    margin: 0px;
+  }
+
+  h2 {
+    font-size: 100px;
+    margin: 5px;
+  }
+}
+
+.entrance-caption {
+  border: 1px solid black;
+  position: absolute;
+  text-align: left;
+
+  p {
+    margin: 0px;
+  }
+
 }
 
 // ====================================================== F O O T E R ====================================================== //
@@ -320,7 +295,7 @@ svg {
 }
 
 .spinner {
-  margin: 100px auto;
+  margin: 0px auto;
   width: 50px;
   height: 40px;
   text-align: center;
@@ -332,8 +307,6 @@ $spinner-inbetween-interval: 0.1s;
 $spinner-cycle: 1.2s;
 
 .spinner-container {
-	height: 100%;
-	width: 100%;
 	//margin-left: -($spinner-length/2)*6px;
 }
 
