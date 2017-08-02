@@ -116,6 +116,77 @@ ul.banner-social-buttons {
     }
 }
 
+// ====================================================== N A V B A R ====================================================== //
+
+.navbar-custom {
+		//display: none;
+		margin-bottom: 0;
+		margin-top: -10px;
+		padding: 0 10px;
+    border: none;
+    text-transform: uppercase;
+    font-family: $main-font;
+    background-color: $div-background-color;
+
+    .navbar-brand {
+        font-weight: 700;
+        &:focus {
+            outline: none;
+        }
+    }
+    a {
+        color: $link-color;
+				&:hover {
+						color: $link-hover-color;
+				}
+    }
+    .nav {
+			font-family: $secondary-font;
+        a {
+          	-webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+
+            &:hover {
+                color: $link-hover-color;
+                outline: none;
+                background-color: transparent;
+            }
+            &:focus,
+            &:active {
+                outline: none;
+                background-color: transparent;
+            }
+        }
+        &.active {
+            outline: none;
+            a {
+                background-color: $link-color;
+            }
+        }
+    }
+
+    @media(min-width:768px) {
+				display: block;
+        padding: 20px 0;
+        border-bottom: none;
+        letter-spacing: 1px;
+        background: transparent;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+        &.top-nav-collapse {
+            padding: 10px 0;
+            background: $div-background-color;
+            border-bottom: 1px solid transparentize($div-border-color,0.7);
+        }
+				.navbar-collapse {
+					padding: 0px 50px;
+				}
+    }
+}
+
+
 // ====================================================== I N T R O ====================================================== //
 
 .intro {
@@ -162,85 +233,6 @@ $banner-width: 100%;
 .content-row {
   width: 90%;
   margin: 100px auto;
-}
-
-// ====================================================== A B O U T ====================================================== //
-
-.about-banner {
-	padding: 50px 0;
-	margin: $banner-margin;
-
-  width: 90%;
-
-	@include banner(no-repeat center center scroll,-$tilt);
-}
-
-// ================================================== P L A C E H O L D E R ================================================== //
-
-.place-banner {
-    padding: 50px;
-		margin: $banner-margin;
-
-    width: $banner-width;
-
-		@include banner(no-repeat center center scroll,$tilt);
-}
-
-.place-banner-alt {
-    padding: 50px;
-		margin: $banner-margin;
-
-    width: $banner-width;
-
-		@include banner(no-repeat center center scroll,-$tilt);
-}
-
-// ================================================== S C A R E ================================================== //
-
-.scare-banner {
-    padding: 50px;
-		margin: $banner-margin;
-
-    width: $banner-width;
-
-		@include banner(no-repeat center center scroll,-$tilt);
-}
-
-// ====================================================== B O O T H S ====================================================== //
-
-.booth-banner {
-		padding: 50px 0;
-		margin: $banner-margin;
-
-    width: $banner-width;
-
-		@include banner(no-repeat center center scroll,$tilt);
-}
-
-@media(min-width:768px) {
-
-	.left-bar {
-		border: none;
-		border-left: solid $paragraph-color 2.5px;
-	}
-
-  .right-bar {
-		border: none;
-		border-right: solid $paragraph-color 2.5px;
-	}
-
-}
-
-.booth-pricing-row {
-	margin: 0px;
-	margin-top: 50px;
-	margin-bottom: 10px;
-}
-
-.booth-deposit-row {
-	margin: 0px;
-	margin-top: 10px;
-	margin-bottom: 0px;
 }
 
 // ====================================================== L O C A T I O N ====================================================== //
@@ -440,6 +432,7 @@ $spinner-cycle: 1.2s;
 
 .booth-price {
   font-size: 50px;
+  color: $highlight-color;
 }
 
 .booth-number {
@@ -452,7 +445,15 @@ $spinner-cycle: 1.2s;
 }
 
 .booth-number {
-  color: $paragraph-color;
+  color: $highlight-color;
+}
+
+.booth-electricity {
+  color: $electricity-color;
+}
+
+.booth-no-electricity {
+  color: $no-electricity-color;
 }
 
 // ====================================================== R E S P O N D ====================================================== //

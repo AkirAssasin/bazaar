@@ -17,7 +17,7 @@ var boothRadius = 4.5;
 var floorOutline = "#081214";
 var floorFill = "#999999";
 
-var boothOutline = "#555555";
+var boothOutline = "#888888";
 var electricOutline = "#FFFF00";
 
 var bookedFill = "#333333";
@@ -46,7 +46,7 @@ function drawSVGPaths (data, tabletop) {
 
   //var floorPlan = map.path("M240 10L240 130L230 140L190 140L180 130L180 100L160 80L160 50L150 40L50 40L40 50L40 60L30 70L10 70L0 80L0 190L10 200L300 200L310 190L310 80L320 70L330 70L340 60L340 10L330 0L250 0L240 10Z");
   var floorPlan = map.path("M410 0L420 10L420 60L410 70L370 70L370 150L480 150L490 160L490 260L480 270L420 270L410 260L410 220L260 220L250 210L10 210L0 200L0 90L10 80L160 80L170 90L170 120L200 120L210 130L210 160L250 160L260 150L290 150L290 10L300 0L410 0Z");
-  floorPlan.attr({"fill":floorFill,"opacity":"0","stroke":floorOutline,"type":"path"});
+  floorPlan.attr({"fill":floorFill,"opacity":"0","stroke":floorOutline,"stroke-width":0,"type":"path"});
   floorPlan.animate(planAnimation);
 
   var arrow = map.path(arrowPath);
@@ -84,8 +84,6 @@ function drawSVGPaths (data, tabletop) {
 
     }
 
-    var boothPrice = "RM" + boothPrice;
-
     booth.data({"boothID":data[i].ID,"boothState":data[i].Verified,"boothElectricity":data[i].Electricity,"boothPrice":boothPrice});
 
       var delay = planMilliseconds - (Math.random() * randomMilliseconds);
@@ -113,6 +111,14 @@ function drawSVGPaths (data, tabletop) {
         $infobox.find('.booth-number').text(this.data("boothID"));
 
         $infobox.find('.booth-price').text(this.data("boothPrice"));
+
+        if (this.data("boothElectricity") == 'Y') {
+          $infobox.find('.booth-electricity').removeClass('hidden');
+          $infobox.find('.booth-no-electricity').addClass('hidden');
+        } else {
+          $infobox.find('.booth-electricity').addClass('hidden');
+          $infobox.find('.booth-no-electricity').removeClass('hidden');
+        }
 
         if (!infoboxIsClosed) {
           $infobox.css({'transition' : 'all 0.5s ease-in-out'});

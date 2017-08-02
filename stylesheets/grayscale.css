@@ -1,600 +1,76 @@
-@font-face {
-  font-family: "Angeline Vintage";
-  src: url("../fonts/Angeline Vintage.ttf") format("truetype");
-}
-/* line 4, ../sass/grayscale.scss */
-body {
-  width: 100%;
-  height: 100%;
-  font-family: "Armata", sans-serif;
-  color: #000;
-  background: url(../img/body-bg.png) repeat;
-  background-repeat: repeat;
-}
+/*
+Error: Undefined mixin 'banner'.
+        on line 246 of /Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss, in `banner'
+        from line 246 of /Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss
 
-/* line 15, ../sass/grayscale.scss */
-html {
-  width: 100%;
-  height: 100%;
-}
+241: 		padding: 50px 0;
+242: 		margin: $banner-margin;
+243: 
+244:     width: $banner-width;
+245: 
+246: 		@include banner(no-repeat center center scroll,$tilt);
+247: }
+248: 
+249: @media(min-width:767px) {
+250:     #map {
+251:         height: 400px;
 
-/* line 22, ../sass/grayscale.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 35px;
-  text-transform: uppercase;
-  font-family: "Angeline Vintage", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 40px;
-}
-
-/* line 36, ../sass/grayscale.scss */
-p {
-  margin: 0 0 25px;
-  font-size: 17px;
-  line-height: 1.5;
-}
-@media (min-width: 768px) {
-  /* line 36, ../sass/grayscale.scss */
-  p {
-    margin: 0 0 35px;
-    font-size: 22px;
-    line-height: 1.6;
-  }
-}
-
-/* line 47, ../sass/grayscale.scss */
-a {
-  color: #000;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-/* line 52, ../sass/grayscale.scss */
-a:hover, a:focus {
-  text-decoration: none;
-  color: #000;
-}
-
-/* line 59, ../sass/grayscale.scss */
-.light {
-  font-weight: 400;
-  font-family: "Armata", sans-serif;
-  font-size: 70%;
-  text-align: center center;
-}
-
-/* line 66, ../sass/grayscale.scss */
-.boost-size {
-  font-size: 110%;
-  font-weight: 150%;
-}
-
-/* line 71, ../sass/grayscale.scss */
-.to-be-announced {
-  opacity: 0.5;
-}
-
-/* line 77, ../sass/grayscale.scss */
-.btn {
-  text-transform: uppercase;
-  font-family: "Armata", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  border-radius: 2px;
-}
-
-/* line 88, ../sass/grayscale.scss */
-.btn-secondary {
-  border: 0px;
-  outline: none;
-  color: #000;
-  background-color: #ff0;
-  opacity: 0.8;
-}
-/* line 94, ../sass/grayscale.scss */
-.btn-secondary:hover, .btn-secondary:focus {
-  opacity: 1;
-  color: #000;
-  background-color: #ffa;
-}
-
-/* line 102, ../sass/grayscale.scss */
-ul.banner-social-buttons {
-  margin-top: 0;
-}
-@media (max-width: 1199px) {
-  /* line 102, ../sass/grayscale.scss */
-  ul.banner-social-buttons {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 767px) {
-  /* line 108, ../sass/grayscale.scss */
-  ul.banner-social-buttons li {
-    display: block;
-    margin-bottom: 20px;
-    padding: 0;
-  }
-  /* line 112, ../sass/grayscale.scss */
-  ul.banner-social-buttons li:last-child {
-    margin-bottom: 0;
-  }
-}
-
-/* line 121, ../sass/grayscale.scss */
-.intro {
-  display: table;
-  width: 100%;
-  height: auto;
-  padding: 100px 0px;
-  margin-top: 100px;
-  text-align: center;
-  color: #000;
-}
-/* line 131, ../sass/grayscale.scss */
-.intro .intro-body {
-  display: block;
-  vertical-align: middle;
-}
-/* line 135, ../sass/grayscale.scss */
-.intro .intro-body .brand-heading {
-  font-size: 50px;
-}
-/* line 138, ../sass/grayscale.scss */
-.intro .intro-body .intro-text {
-  font-size: 20px;
-}
-@media (min-width: 768px) {
-  /* line 121, ../sass/grayscale.scss */
-  .intro {
-    height: auto;
-    padding: 0;
-  }
-  /* line 146, ../sass/grayscale.scss */
-  .intro .intro-body .brand-heading {
-    font-size: 120px;
-  }
-  /* line 149, ../sass/grayscale.scss */
-  .intro .intro-body .intro-text {
-    font-size: 26px;
-  }
-}
-
-/* line 162, ../sass/grayscale.scss */
-.content-row {
-  width: 90%;
-  margin: 100px auto;
-}
-
-/* line 169, ../sass/grayscale.scss */
-.about-banner {
-  padding: 50px 0;
-  margin: 0px auto;
-  width: 90%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, -0.8deg);
-  -o-transform: skew(0deg, -0.8deg);
-  -ms-transform: skew(0deg, -0.8deg);
-  -webkit-transform: skew(0deg, -0.8deg);
-  transform: skew(0deg, -0.8deg);
-}
-
-/* line 180, ../sass/grayscale.scss */
-.place-banner {
-  padding: 50px;
-  margin: 0px auto;
-  width: 100%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, 0.8deg);
-  -o-transform: skew(0deg, 0.8deg);
-  -ms-transform: skew(0deg, 0.8deg);
-  -webkit-transform: skew(0deg, 0.8deg);
-  transform: skew(0deg, 0.8deg);
-}
-
-/* line 189, ../sass/grayscale.scss */
-.place-banner-alt {
-  padding: 50px;
-  margin: 0px auto;
-  width: 100%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, -0.8deg);
-  -o-transform: skew(0deg, -0.8deg);
-  -ms-transform: skew(0deg, -0.8deg);
-  -webkit-transform: skew(0deg, -0.8deg);
-  transform: skew(0deg, -0.8deg);
-}
-
-/* line 200, ../sass/grayscale.scss */
-.scare-banner {
-  padding: 50px;
-  margin: 0px auto;
-  width: 100%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, -0.8deg);
-  -o-transform: skew(0deg, -0.8deg);
-  -ms-transform: skew(0deg, -0.8deg);
-  -webkit-transform: skew(0deg, -0.8deg);
-  transform: skew(0deg, -0.8deg);
-}
-
-/* line 211, ../sass/grayscale.scss */
-.booth-banner {
-  padding: 50px 0;
-  margin: 0px auto;
-  width: 100%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, 0.8deg);
-  -o-transform: skew(0deg, 0.8deg);
-  -ms-transform: skew(0deg, 0.8deg);
-  -webkit-transform: skew(0deg, 0.8deg);
-  transform: skew(0deg, 0.8deg);
-}
-
-@media (min-width: 768px) {
-  /* line 222, ../sass/grayscale.scss */
-  .left-bar {
-    border: none;
-    border-left: solid #000 2.5px;
-  }
-
-  /* line 227, ../sass/grayscale.scss */
-  .right-bar {
-    border: none;
-    border-right: solid #000 2.5px;
-  }
-}
-/* line 234, ../sass/grayscale.scss */
-.booth-pricing-row {
-  margin: 0px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-}
-
-/* line 240, ../sass/grayscale.scss */
-.booth-deposit-row {
-  margin: 0px;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-/* line 248, ../sass/grayscale.scss */
-.location-banner {
-  padding: 50px 0;
-  margin: 0px auto;
-  width: 100%;
-  background: no-repeat center center scroll;
-  border: solid #9C400B 5px;
-  color: #000;
-  background-color: #FF6913;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-  -moz-transform: skew(0deg, 0.8deg);
-  -o-transform: skew(0deg, 0.8deg);
-  -ms-transform: skew(0deg, 0.8deg);
-  -webkit-transform: skew(0deg, 0.8deg);
-  transform: skew(0deg, 0.8deg);
-}
-
-@media (min-width: 767px) {
-  /* line 258, ../sass/grayscale.scss */
-  #map {
-    height: 400px;
-    margin-top: 250px;
-  }
-}
-/* line 266, ../sass/grayscale.scss */
-footer {
-  padding: 50px 0;
-}
-/* line 268, ../sass/grayscale.scss */
-footer p {
-  margin: 0;
-}
-
-/* line 275, ../sass/grayscale.scss */
-::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* line 281, ../sass/grayscale.scss */
-::selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* line 287, ../sass/grayscale.scss */
-img::selection {
-  background: transparent;
-}
-
-/* line 291, ../sass/grayscale.scss */
-img::-moz-selection {
-  background: transparent;
-}
-
-/* line 295, ../sass/grayscale.scss */
-body {
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
-
-/* line 301, ../sass/grayscale.scss */
-.map-banner {
-  padding-top: 50px;
-  height: 100%;
-  width: 100%;
-}
-
-/* line 307, ../sass/grayscale.scss */
-#map {
-  padding: 10px 100px;
-  margin: 0px;
-  height: 100%;
-  width: 100%;
-  overflow: visible;
-}
-
-/* line 315, ../sass/grayscale.scss */
-.hidden {
-  display: none;
-}
-
-/* line 319, ../sass/grayscale.scss */
-.hide-before-load {
-  display: none;
-}
-
-/* line 323, ../sass/grayscale.scss */
-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-  -webkit-transition: opacity 0.5s ease;
-  -moz-transition: opacity 0.5s ease;
-  -ms-transition: opacity 0.5s ease;
-  -o-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-}
-
-/* line 330, ../sass/grayscale.scss */
-.spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  font-size: 10px;
-}
-
-/* line 342, ../sass/grayscale.scss */
-.spinner-container {
-  height: 100%;
-  width: 100%;
-}
-
-/* line 348, ../sass/grayscale.scss */
-.spinner-container:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-
-/* line 355, ../sass/grayscale.scss */
-.spinner > div {
-  background-color: #000;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-  animation: sk-stretchdelay 1.2s infinite ease-in-out;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-3 {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-6 {
-  -webkit-animation-delay: -0.7s;
-  animation-delay: -0.7s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-7 {
-  -webkit-animation-delay: -0.6s;
-  animation-delay: -0.6s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-8 {
-  -webkit-animation-delay: -0.5s;
-  animation-delay: -0.5s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-9 {
-  -webkit-animation-delay: -0.4s;
-  animation-delay: -0.4s;
-}
-
-/* line 368, ../sass/grayscale.scss */
-.spinner .rect-10 {
-  -webkit-animation-delay: -0.3s;
-  animation-delay: -0.3s;
-}
-
-@-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    -webkit-transform: scaleY(0.4);
-  }
-  20% {
-    -webkit-transform: scaleY(1);
-  }
-}
-@keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }
-  20% {
-    transform: scaleY(1);
-    -webkit-transform: scaleY(1);
-  }
-}
-@-webkit-keyframes sk-scaleout {
-  0% {
-    -webkit-transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    opacity: 0;
-  }
-}
-@keyframes sk-scaleout {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-/* line 409, ../sass/grayscale.scss */
-.booth-info {
-  width: auto;
-  height: auto;
-  padding: 30px;
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  border: solid 2px #3c3c3c;
-  border-radius: 5px;
-  background-color: #575757;
-  color: #000;
-}
-/* line 421, ../sass/grayscale.scss */
-.booth-info p {
-  margin: 0px;
-}
-
-/* line 426, ../sass/grayscale.scss */
-.booth-info-close {
-  width: 22px;
-  height: 24px;
-  padding: 5px;
-  font-size: 1em;
-  line-height: 0.9333333333em;
-  background-color: transparent;
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  text-decoration: none;
-  display: block;
-  border: none;
-}
-
-/* line 441, ../sass/grayscale.scss */
-.booth-price {
-  font-size: 50px;
-}
-
-/* line 445, ../sass/grayscale.scss */
-.booth-number {
-  font-size: 30px;
-}
-
-/* line 449, ../sass/grayscale.scss */
-.booth-section {
-  width: 100%;
-  height: 100%;
-}
-
-/* line 454, ../sass/grayscale.scss */
-.booth-number {
-  color: #000;
-}
-
-@media (max-width: 768px) {
-  /* line 461, ../sass/grayscale.scss */
-  .mobile-hide {
-    display: none;
-  }
-}
-@media (min-width: 769px) {
-  /* line 465, ../sass/grayscale.scss */
-  .mobile-only {
-    display: none;
-  }
-}
+Backtrace:
+/Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss:246:in `banner'
+/Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss:246
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:348:in `visit_mixin'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:98:in `with_mixin'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+org/jruby/RubyArray.java:2412:in `map'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+org/jruby/RubyArray.java:2412:in `map'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+org/jruby/RubyMethod.java:128:in `call'
+file:/Applications/compass.app/Contents/Java/compass-app.jar!/hook/compass_patch.rb:108:in `update_stylesheet'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Applications/compass.app/Contents/Resources/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `watch'
+org/jruby/RubyProc.java:271:in `call'
+/Applications/compass.app/Contents/Resources/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:252:in `on_change'
+/Applications/compass.app/Contents/Resources/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:290:in `initialize_adapter'
+org/jruby/RubyProc.java:271:in `call'
+/Applications/compass.app/Contents/Resources/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapter.rb:252:in `report_changes'
+/Applications/compass.app/Contents/Resources/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapter.rb:321:in `poll_changed_directories'
+/Applications/compass.app/Contents/Resources/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapter.rb:297:in `start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'banner'.\A         on line 246 of /Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss, in `banner'\A         from line 246 of /Users/lohchangzhen/Documents/GitHub/bazaar/sass/grayscale.scss\A \A 241: 		padding: 50px 0;\A 242: 		margin: $banner-margin;\A 243: \A 244:     width: $banner-width;\A 245: \A 246: 		@include banner(no-repeat center center scroll,$tilt);\A 247: }\A 248: \A 249: @media(min-width:767px) {\A 250:     #map {\A 251:         height: 400px;"; }
