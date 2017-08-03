@@ -194,16 +194,12 @@ function drawSVGPaths (data, tabletop) {
   svg.removeAttribute("width");
   svg.removeAttribute("height");
 
-  var mapos = $("#map").position();
+  console.log(map.canvas.offsetLeft);
+  console.log(map.canvas.offsetTop);
 
   $(".map-caption").each (function (index) {
-    $(this).css({
-      'top' : mapos.top,
-      'left' : mapos.left
-    });
-  });
+    var mapos = $("#map").position();
 
-  $(".map-caption").each (function (index) {
     $(this).css({
       'top' : mapos.top,
       'left' : mapos.left
@@ -211,5 +207,20 @@ function drawSVGPaths (data, tabletop) {
   });
 
 }
+
+$(window).resize(function () {
+
+  $(".map-caption").each (function (index) {
+    var mapos = $("#map").position();
+
+    $(this).css({
+      'top' : mapos.top,
+      'left' : mapos.left
+    });
+  });
+
+  //console.log("h");
+
+});
 
 window.addEventListener('DOMContentLoaded', init)
