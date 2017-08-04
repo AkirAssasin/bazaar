@@ -129,6 +129,10 @@ function drawSVGPaths (data, tabletop) {
           $infobox.find('.booth-no-electricity').removeClass('hidden');
         }
 
+        $infobox.find('.booth-site').attr("href",
+        "https://docs.google.com/forms/d/e/1FAIpQLSelGFxRpTTWzvzDblYdionpJyE-PrV4ZF8xG15YpOv_CwXkSg/viewform?usp=pp_url&entry.32327792&entry.1063218980&entry.338191277="
+         + this.data("boothID") + "&entry.527225325");
+
         if (!infoboxIsClosed) {
           $infobox.css({'transition' : 'all 0.5s ease-in-out'});
         }
