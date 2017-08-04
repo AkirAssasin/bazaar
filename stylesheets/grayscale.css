@@ -50,7 +50,7 @@ p {
 
 /* line 47, ../sass/grayscale.scss */
 a {
-  color: #000;
+  color: #aa5;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
@@ -58,7 +58,7 @@ a {
 /* line 52, ../sass/grayscale.scss */
 a:hover, a:focus {
   text-decoration: none;
-  color: #000;
+  color: #550;
 }
 
 /* line 59, ../sass/grayscale.scss */
@@ -150,11 +150,11 @@ ul.banner-social-buttons {
 }
 /* line 137, ../sass/grayscale.scss */
 .navbar-custom a {
-  color: #000;
+  color: #aa5;
 }
 /* line 139, ../sass/grayscale.scss */
 .navbar-custom a:hover {
-  color: #000;
+  color: #550;
 }
 /* line 143, ../sass/grayscale.scss */
 .navbar-custom .nav {
@@ -168,7 +168,7 @@ ul.banner-social-buttons {
 }
 /* line 150, ../sass/grayscale.scss */
 .navbar-custom .nav a:hover {
-  color: #000;
+  color: #550;
   outline: none;
   background-color: transparent;
 }
@@ -183,7 +183,7 @@ ul.banner-social-buttons {
 }
 /* line 163, ../sass/grayscale.scss */
 .navbar-custom .nav.active a {
-  background-color: #000;
+  background-color: #aa5;
 }
 @media (min-width: 768px) {
   /* line 121, ../sass/grayscale.scss */
