@@ -387,7 +387,7 @@ $spinner-cycle: 1.2s;
 }
 
 .booth-info {
-	width: auto;
+	width: 500px;
 	height: auto;
 	padding: 30px;
 	position: absolute;
@@ -402,7 +402,17 @@ $spinner-cycle: 1.2s;
     margin: 0px;
   }
 
+  span {
+    margin: 0px;
+  }
+
 }
+
+.booth-price-container {
+  margin: 0px;
+  padding: 0px;
+}
+
 .booth-info-close {
 	width: 22px;
 	height: 24px;
@@ -423,6 +433,11 @@ $spinner-cycle: 1.2s;
   color: $highlight-color;
 }
 
+.booth-discount {
+  color: #CCC;
+  font-size: 18px;
+}
+
 .booth-number {
   font-size: 30px;
 }
@@ -434,6 +449,10 @@ $spinner-cycle: 1.2s;
 
 .booth-number {
   color: $highlight-color;
+}
+
+.booth-site {
+  margin-top: 10px;
 }
 
 .booth-electricity {

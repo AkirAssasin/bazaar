@@ -462,7 +462,7 @@ svg {
 }
 /* line 389, ../sass/grayscale.scss */
 .booth-info {
-  width: auto;
+  width: 500px;
   height: auto;
   padding: 30px;
   position: absolute;
@@ -477,8 +477,18 @@ svg {
 .booth-info p {
   margin: 0px;
 }
+/* line 405, ../sass/grayscale.scss */
+.booth-info span {
+  margin: 0px;
+}
 
-/* line 406, ../sass/grayscale.scss */
+/* line 411, ../sass/grayscale.scss */
+.booth-price-container {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 416, ../sass/grayscale.scss */
 .booth-info-close {
   width: 22px;
   height: 24px;
@@ -494,46 +504,57 @@ svg {
   border: none;
 }
 
-/* line 421, ../sass/grayscale.scss */
+/* line 431, ../sass/grayscale.scss */
 .booth-price {
   font-size: 50px;
   color: #FFFFFF;
 }
 
-/* line 426, ../sass/grayscale.scss */
+/* line 436, ../sass/grayscale.scss */
+.booth-discount {
+  color: #CCC;
+  font-size: 18px;
+}
+
+/* line 441, ../sass/grayscale.scss */
 .booth-number {
   font-size: 30px;
 }
 
-/* line 430, ../sass/grayscale.scss */
+/* line 445, ../sass/grayscale.scss */
 .booth-section {
   width: 100%;
   height: 100%;
 }
 
-/* line 435, ../sass/grayscale.scss */
+/* line 450, ../sass/grayscale.scss */
 .booth-number {
   color: #FFFFFF;
 }
 
-/* line 439, ../sass/grayscale.scss */
+/* line 454, ../sass/grayscale.scss */
+.booth-site {
+  margin-top: 10px;
+}
+
+/* line 458, ../sass/grayscale.scss */
 .booth-electricity {
   color: #FFFF00;
 }
 
-/* line 443, ../sass/grayscale.scss */
+/* line 462, ../sass/grayscale.scss */
 .booth-no-electricity {
   color: #888888;
 }
 
 @media (max-width: 768px) {
-  /* line 450, ../sass/grayscale.scss */
+  /* line 469, ../sass/grayscale.scss */
   .mobile-hide {
     display: none;
   }
 }
 @media (min-width: 769px) {
-  /* line 454, ../sass/grayscale.scss */
+  /* line 473, ../sass/grayscale.scss */
   .mobile-only {
     display: none;
   }
